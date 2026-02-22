@@ -92,7 +92,7 @@ const testimonials = [
 const faqs = [
   {
     question: 'How do I book a puja?',
-    answer: 'You can book a puja by calling us at +91 9876543210, WhatsApp at +91 9876543210, or filling the booking form on this website. We will confirm the booking within 24 hours.'
+    answer: 'You can book a puja by calling us at +91 95807 58639, WhatsApp at +91 95807 58639, or filling the booking form on this website. We will confirm the booking within 24 hours.'
   },
   {
     question: 'What is the service area?',
@@ -200,7 +200,7 @@ export default function Home() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage('')
-    
+
     // Validate required fields
     if (!formData.name || !formData.phone || !formData.service) {
       setSubmitMessage('Please fill in all required fields (Name, Phone, Service)')
@@ -240,16 +240,16 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
         // Encode message
         const encodedMessage = encodeURIComponent(whatsappMessage)
-        
+
         // Create WhatsApp URL
         const whatsappUrl = `https://wa.me/919580758639?text=${encodedMessage}`
-        
+
         // Show success message
         setSubmitMessage('✅ Booking saved! Opening WhatsApp to send details to Pandit Ji...')
-        
+
         // Clear form
         setFormData({ name: '', phone: '', service: '', date: '', time: '', address: '', message: '' })
-        
+
         // Redirect to WhatsApp after 2 seconds
         setTimeout(() => {
           window.location.href = whatsappUrl
@@ -274,7 +274,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
   }
 
   const whatsappMessage = encodeURIComponent('Namaste! I would like to book a puja. Please share details.')
-  const whatsappLink = `https://wa.me/919876543210?text=${whatsappMessage}`
+  const whatsappLink = `https://wa.me/919580758639?text=${whatsappMessage}`
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
@@ -302,7 +302,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
             </nav>
 
             <div className="hidden md:flex items-center space-x-3">
-              <a href="tel:+919876543210">
+              <a href="tel:+919580758639">
                 <Button className="bg-orange-600 hover:bg-orange-700">
                   <Phone className="w-4 h-4 mr-2" />
                   Book Now
@@ -346,11 +346,11 @@ Booking ID: ${data.bookingId || 'N/A'}`
             filter: 'brightness(0.35)'
           }}
         />
-        
+
         {/* Gradient Overlays for Depth */}
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/90 via-red-800/80 to-orange-900/90" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
-        
+
         {/* Decorative Elements */}
         <div className="absolute top-10 left-10 w-32 h-32 opacity-10 animate-spin-slow">
           <img src="https://images.pexels.com/photos/7181865/pexels-photo-7181865.jpeg" alt="Mandala" className="w-full h-full object-contain" />
@@ -667,8 +667,8 @@ Booking ID: ${data.bookingId || 'N/A'}`
               Customer <span className="text-orange-600">Reviews</span>
             </h2>
             <p className="text-xl text-gray-600 mb-6">Real experiences from our satisfied clients</p>
-            
-            <Button 
+
+            <Button
               onClick={() => setShowReviewForm(!showReviewForm)}
               className="bg-orange-600 hover:bg-orange-700"
               size="lg"
@@ -698,7 +698,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
                         className="border-orange-200 focus:border-orange-400"
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Rating *
@@ -712,11 +712,10 @@ Booking ID: ${data.bookingId || 'N/A'}`
                             className="focus:outline-none"
                           >
                             <Star
-                              className={`w-8 h-8 ${
-                                star <= reviewForm.rating
+                              className={`w-8 h-8 ${star <= reviewForm.rating
                                   ? 'fill-orange-500 text-orange-500'
                                   : 'text-gray-300'
-                              }`}
+                                }`}
                             />
                           </button>
                         ))}
@@ -786,10 +785,10 @@ Booking ID: ${data.bookingId || 'N/A'}`
                     <CardDescription className="text-sm">
                       {review.service && <span className="text-orange-600">{review.service}</span>}
                       {review.service && ' • '}
-                      {new Date(review.date).toLocaleDateString('en-IN', { 
-                        day: 'numeric', 
-                        month: 'short', 
-                        year: 'numeric' 
+                      {new Date(review.date).toLocaleDateString('en-IN', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
                       })}
                     </CardDescription>
                   </CardHeader>
@@ -886,7 +885,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">

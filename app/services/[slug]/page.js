@@ -539,7 +539,7 @@ const servicesData = {
         {
           name: 'Prasad Distribution',
           description: 'Distribution of prasad to all attendees - must be consumed as blessing'
-      }
+        }
       ],
       duration: '2-3 hours'
     },
@@ -940,7 +940,7 @@ export default function ServicePage() {
   }
 
   const whatsappMessage = encodeURIComponent(`Namaste! I would like to book ${service.title}. Please share details.`)
-  const whatsappLink = `https://wa.me/919876543210?text=${whatsappMessage}`
+  const whatsappLink = `https://wa.me/919580758639?text=${whatsappMessage}`
 
   return (
     <div className="min-h-screen bg-white">
@@ -980,7 +980,7 @@ export default function ServicePage() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-red-900/80" />
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto">
             <div className="mb-4">
@@ -1006,10 +1006,10 @@ export default function ServicePage() {
                 WhatsApp Booking
               </Button>
             </a>
-            <a href="tel:+919876543210">
+            <a href="tel:+919580758639">
               <Button size="sm" variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-50">
                 <Phone className="w-4 h-4 mr-2" />
-                Call: +91 9876543210
+                Call: +91 95807 58639
               </Button>
             </a>
           </div>
@@ -1172,15 +1172,15 @@ export default function ServicePage() {
                 </CardHeader>
                 <CardContent className="pt-6 space-y-4">
                   <p className="text-gray-700">Schedule your {service.title} with experienced Pandit Ji</p>
-                  
+
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="block">
                     <Button className="w-full bg-green-600 hover:bg-green-700" size="lg">
                       <MessageCircle className="w-5 h-5 mr-2" />
                       WhatsApp Booking
                     </Button>
                   </a>
-                  
-                  <a href="tel:+919876543210" className="block">
+
+                  <a href="tel:+919580758639" className="block">
                     <Button className="w-full bg-orange-600 hover:bg-orange-700" size="lg">
                       <Phone className="w-5 h-5 mr-2" />
                       Call Now
@@ -1232,11 +1232,11 @@ export default function ServicePage() {
                   <div className="space-y-3 text-sm">
                     <div className="flex items-center space-x-2 text-gray-700">
                       <Phone className="w-4 h-4 text-orange-600" />
-                      <span>+91 9876543210</span>
+                      <span>+91 95807 58639</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-700">
                       <MessageCircle className="w-4 h-4 text-orange-600" />
-                      <span>+91 9876543210</span>
+                      <span>+91 95807 58639</span>
                     </div>
                   </div>
                 </CardContent>
@@ -1259,7 +1259,7 @@ export default function ServicePage() {
 
       {/* Floating Call Button */}
       <a
-        href="tel:+919876543210"
+        href="tel:+919580758639"
         className="fixed bottom-24 right-6 z-50 bg-orange-600 hover:bg-orange-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
         aria-label="Call Now"
       >
