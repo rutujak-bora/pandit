@@ -1,3 +1,4 @@
+# CI/CD Trigger: Secrets Added
 name: Deploy to EC2
 
 on:
