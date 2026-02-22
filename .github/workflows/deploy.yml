@@ -36,7 +36,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/pandit_website
-            git pull origin main || (git clone https://github.com/rutujak-bora/pandit_website.git temp_repo && cp -r temp_repo/* . && rm -rf temp_repo)
+            git pull origin main || (git clone https://github.com/rutujak-bora/pandit.git temp_repo && cp -r temp_repo/* . && rm -rf temp_repo)
             npm install --legacy-peer-deps
             
             # Create/Update .env.local on server
