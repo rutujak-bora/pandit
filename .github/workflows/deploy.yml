@@ -1,0 +1,51 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build project
+        run: npm run build
+        env:
+          MONGO_URL: ${{ secrets.MONGO_URL }}
+          DB_NAME: "pandit_booking"
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 16.170.163.123
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/pandit_website
+            git pull origin main || (git clone https://github.com/rutujak-bora/pandit_website.git temp_repo && cp -r temp_repo/* . && rm -rf temp_repo)
+            npm install --legacy-peer-deps
+            
+            # Create/Update .env.local on server
+            echo "MONGO_URL=${{ secrets.MONGO_URL }}" > .env.local
+            echo "DB_NAME=pandit_booking" >> .env.local
+            
+            npm run build
+            
+            # Restart with PM2
+            pm2 delete pandit-web || true
+            pm2 start "npm run start" --name pandit-web
+            pm2 save

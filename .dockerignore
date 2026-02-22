@@ -1,0 +1,10 @@
+node_modules
+.next
+.env.local
+.git
+.gitignore
+*.md
+Dockerfile
+.dockerignore
+package-lock.json
+yarn.lock
