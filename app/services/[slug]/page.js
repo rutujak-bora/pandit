@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const servicesData = {
   'wedding-puja': {
-    title: 'Wedding Puja (Vivah Sanskar)',
+    title: 'Wedding Puja - Best Wedding Pandit in Delhi NCR',
     slug: 'wedding-puja',
     icon: '💑',
     heroImage: 'https://images.pexels.com/photos/36053876/pexels-photo-36053876.jpeg',
@@ -19,7 +19,7 @@ const servicesData = {
     ],
     significance: {
       title: 'Meaning and Significance',
-      content: 'Vivah Sanskar is one of the most sacred of the 16 sanskars in Hindu tradition. It is not merely a social contract but a spiritual union of two souls ordained by the divine. The wedding ceremony is performed before Agni (sacred fire) as witness, with the belief that the bond created transcends this lifetime. The rituals symbolize the couple\'s commitment to support each other in dharma (righteousness), artha (prosperity), kama (desires), and moksha (liberation). The seven vows (Saptapadi) taken around the sacred fire represent promises for seven aspects of married life - nourishment, strength, prosperity, happiness, progeny, long life, and devotion.',
+      content: 'Vivah Sanskar is one of the most sacred rituals, and choosing the best wedding pandit in Delhi is crucial for an authentic ceremony. As an experienced wedding priest, I ensure that your union is blessed according to Vedic traditions. If you are searching for a wedding pandit ji near me, we provide complete vivah sanskar services with deep spiritual meaning. The wedding ceremony is performed before Agni (sacred fire) as witness, symbolizing the couple\'s commitment to dharma, artha, kama, and moksha.',
       keyPoints: [
         'Sacred union of two souls blessed by divine presence',
         'One of the 16 essential sanskars in Hindu dharma',
@@ -117,7 +117,7 @@ const servicesData = {
     ]
   },
   'griha-pravesh': {
-    title: 'Griha Pravesh (Housewarming Ceremony)',
+    title: 'Griha Pravesh Puja - Best Pandit for Housewarming Near Me',
     slug: 'griha-pravesh',
     icon: '🏠',
     heroImage: 'https://images.pexels.com/photos/7152003/pexels-photo-7152003.jpeg',
@@ -128,7 +128,7 @@ const servicesData = {
     ],
     significance: {
       title: 'Meaning and Significance',
-      content: 'Griha Pravesh, meaning "entering the house," is an ancient Vedic ceremony performed when moving into a new home. This sacred ritual is believed to purify the space, remove any negative energies, and invoke divine blessings for prosperity, peace, and protection. The ceremony sanctifies the home as a temple where the family will live harmoniously. According to Vastu Shastra, every structure has its own energy, and Griha Pravesh aligns this energy with cosmic forces. The ritual includes Ganesh Puja for removing obstacles, Vastu Puja for balancing energies, and Navagraha Puja for planetary harmony.',
+      content: 'Griha Pravesh is a sacred ritual when moving into a new home. Finding an expert pandit for griha pravesh near me ensures your new home is filled with positive energy. This Vedic ceremony purifies the space and removes negative energies. If you seek the best puja pandit in Delhi NCR for your housewarming, our authentic rituals will bless your home for prosperity and peace. The ceremony includes Ganesh Puja, Vastu Puja, and Navagraha Puja for planetary harmony.',
       keyPoints: [
         'Purifies and sanctifies the new home environment',
         'Removes negative energies and establishes positive vibrations',

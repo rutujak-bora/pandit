@@ -111,6 +111,10 @@ const faqs = [
     answer: 'Yes, Pandit ji provides free muhurat consultation for all bookings. You can discuss auspicious dates and timings during the booking process.'
   },
   {
+    question: 'How can I find the best pandit ji near me?',
+    answer: 'Finding the best pandit ji near me is easy with our platform. We provide experienced and knowledgeable priests across Delhi, Gurgaon, Noida, and Faridabad. All our pandits are Vedic scholars with 15+ years of experience in performing authentic ceremonies.'
+  },
+  {
     question: 'What are the payment methods?',
     answer: 'We accept cash, UPI, bank transfer, and online payment methods. Payment details will be shared after booking confirmation.'
   }
@@ -507,7 +511,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                About <span className="text-orange-600">Pandit Rajesh Sharma</span>
+                About <span className="text-orange-600">Pandit Sandesh Tiwari</span>
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 A highly qualified and experienced Vedic scholar serving Delhi NCR with authentic traditional Hindu ceremonies and pujas. With deep knowledge of Vedic scriptures and rituals, Pandit ji ensures every ceremony is performed with utmost devotion and authenticity.
@@ -713,8 +717,8 @@ Booking ID: ${data.bookingId || 'N/A'}`
                           >
                             <Star
                               className={`w-8 h-8 ${star <= reviewForm.rating
-                                  ? 'fill-orange-500 text-orange-500'
-                                  : 'text-gray-300'
+                                ? 'fill-orange-500 text-orange-500'
+                                : 'text-gray-300'
                                 }`}
                             />
                           </button>
@@ -1044,6 +1048,46 @@ Booking ID: ${data.bookingId || 'N/A'}`
         </div>
       </section>
 
+      {/* Service Areas Section for SEO Improvement */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Service Areas - Finding a Pandit Ji Near Me</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Looking for the <strong>best pandit ji near me</strong>? We provide authentic Vedic services across the entire Delhi NCR region. Our experienced <strong>puja pandit</strong> team is available for home ceremonies, office openings, and large-scale events.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad', 'Greater Noida', 'Dwarka', 'South Delhi', 'Rohini', 'Indirapuram'].map((area) => (
+                  <span key={area} className="bg-white border border-orange-100 px-4 py-2 rounded-lg text-sm font-medium text-orange-700 shadow-sm">
+                    Pandit in {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Vedic Services</h3>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-600">
+                <p className="flex items-center gap-2"><span>•</span> Wedding Pandit Delhi</p>
+                <p className="flex items-center gap-2"><span>•</span> Griha Pravesh Puja Specialist</p>
+                <p className="flex items-center gap-2"><span>•</span> Satyanarayan Puja Booking</p>
+                <p className="flex items-center gap-2"><span>•</span> Navratri Puja Pandit Ji</p>
+                <p className="flex items-center gap-2"><span>•</span> Ganesh Puja Services</p>
+                <p className="flex items-center gap-2"><span>•</span> Vastu Shanti Puja Expert</p>
+                <p className="flex items-center gap-2"><span>•</span> Maha Mrityunjay Jaap</p>
+                <p className="flex items-center gap-2"><span>•</span> Rudrabhishek Puja Online</p>
+              </div>
+              <div className="mt-8 p-4 bg-orange-100/50 rounded-xl border border-orange-200">
+                <p className="text-sm text-orange-800 font-medium text-center">
+                  Book the <strong>best pandit</strong> for your spiritual needs today.
+                  Call <a href="tel:+919580758639" className="underline">+91 95807 58639</a> for a free consultation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
@@ -1091,11 +1135,11 @@ Booking ID: ${data.bookingId || 'N/A'}`
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <a href="tel:+919876543210" className="hover:text-orange-400">+91 9876543210</a>
+                  <a href="tel:+919580758639" className="hover:text-orange-400">+91 95807 58639</a>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>contact@panditjiservices.com</span>
+                  <a href="mailto:contact@panditjiservices.com" className="hover:text-white">contact@panditjiservices.com</a>
                 </li>
                 <li className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
@@ -1106,7 +1150,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
+            <p>&copy; {new Date().getFullYear()} Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
           </div>
         </div>
       </footer>
@@ -1124,7 +1168,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
       {/* Floating Call Button */}
       <a
-        href="tel:+919876543210"
+        href="tel:+919580758639"
         className="fixed bottom-24 right-6 z-50 bg-orange-600 hover:bg-orange-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
         aria-label="Call Now"
       >

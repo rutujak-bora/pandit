@@ -4,21 +4,21 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Pandit Ji Services - Professional Hindu Priest for Puja in Delhi NCR | Wedding, Griha Pravesh, Navratri',
-  description: 'Book experienced Pandit Rajesh Sharma for authentic Vedic ceremonies in Delhi NCR. 15+ years experience in wedding puja, griha pravesh, navratri, ganesh puja, naamkaran, and all Hindu rituals. Available across Delhi, Gurgaon, Noida. Call +91 95807 58639',
-  keywords: 'pandit booking delhi, hindu priest delhi ncr, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit',
+  title: 'Pandit Ji Near Me - Best Pandit for Puja in Delhi NCR | Wedding, Griha Pravesh, Satyanarayan',
+  description: 'Looking for the best Pandit ji near me? Book experienced Pandit Sandesh Tiwari for authentic Vedic ceremonies in Delhi NCR. Specializing in Wedding, Griha Pravesh, Satyanarayan Puja, and all Hindu rituals. Serving Delhi, Gurgaon, Noida, and Faridabad. Call +91 95807 58639',
+  keywords: 'pandit ji near me, best pandit in delhi, puja pandit, pandit booking delhi, online pandit booking, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit, satyanarayan puja pandit, north indian pandit, vedic puja services',
   authors: [{ name: 'Pandit Ji Services' }],
   openGraph: {
-    title: 'Pandit Ji Services - Expert Hindu Priest for All Ceremonies in Delhi NCR',
-    description: 'Experienced Pandit for wedding, griha pravesh, navratri and all Hindu pujas in Delhi NCR. Book now for authentic Vedic rituals.',
+    title: 'Pandit Ji Near Me - Expert Hindu Priest for All Ceremonies in Delhi NCR',
+    description: 'Book the best Pandit for wedding, griha pravesh, navratri and all Hindu pujas in Delhi NCR. Authentic Vedic rituals at your home.',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Pandit Ji Services'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pandit Ji Services - Professional Puja Services Delhi NCR',
-    description: 'Book experienced Pandit for authentic Hindu ceremonies. 15+ years experience. Serving Delhi NCR.'
+    title: 'Best Pandit Ji Near Me - Professional Puja Services Delhi NCR',
+    description: 'Book experienced Pandit for authentic Hindu ceremonies. 15+ years experience. Serving Delhi, Noida, Gurgaon.'
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#ea580c" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
-        
+
         {/* Schema.org markup for Local Business */}
         <script
           type="application/ld+json"
