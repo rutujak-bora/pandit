@@ -498,7 +498,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/33362142/pexels-photo-33362142.jpeg"
+                  src="/about.jpg"
                   alt="Pandit performing puja"
                   className="w-full h-[500px] object-cover"
                 />
