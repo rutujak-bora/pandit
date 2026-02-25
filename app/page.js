@@ -513,30 +513,40 @@ Booking ID: ${data.bookingId || 'N/A'}`
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 About <span className="text-orange-600">Pandit Sandesh Tiwari</span>
               </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                A highly qualified and experienced Vedic scholar serving Delhi NCR with authentic traditional Hindu ceremonies and pujas. With deep knowledge of Vedic scriptures and rituals, Pandit ji ensures every ceremony is performed with utmost devotion and authenticity.
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                Pandit Sandesh Tiwari ji is a highly learned <strong>Saryuparin Brahman</strong> associated with one of the oldest <strong>math in Ayodhya</strong>. Serving the Delhi NCR region, he brings over <strong>15 years of experience</strong> in leading sacred Vedic anushthanas and ceremonies with profound devotion and authenticity.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Expert in leading diverse spiritual ceremonies including Navratri Devi Pujan, Maha Mritunjay Jaap, Surya Aradhna, Ganpati Puja, Traditional Marriages, Shri Mad Bhagwat Pooja, and Shri Ram Charit Manas Path.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start space-x-3">
-                  <Award className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+              <div className="grid grid-cols-1 gap-4 mb-8">
+                <div className="flex items-start space-x-3 bg-orange-50 p-3 rounded-lg border border-orange-100">
+                  <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Acharya in Vedic Studies</h3>
-                    <p className="text-gray-600">Graduated from renowned Sanskrit Vishwavidyalaya</p>
+                    <h4 className="font-bold text-gray-900">“Ved Vibhushan” Award</h4>
+                    <p className="text-sm text-gray-600">Honored by the Ministry of Education, Delhi</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Award className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Karmkand Specialist</h3>
-                    <p className="text-gray-600">Expert in all Hindu rituals and ceremonies</p>
+                    <h4 className="font-semibold text-gray-900">“Acharya” in Navyavyakaran</h4>
+                    <p className="text-sm text-gray-600">Sampurnanand Sanskrit Vishwavidyalay, Varanasi</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Award className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Jyotish Acharya</h3>
-                    <p className="text-gray-600">Certified in Vedic astrology and muhurat selection</p>
+                    <h4 className="font-semibold text-gray-900">M.A. in Sanskrit</h4>
+                    <p className="text-sm text-gray-600">Shri Lal Bahadur Shastri National Sanskrit University, New Delhi</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Diploma in Karmkand & Astrology</h4>
+                    <p className="text-sm text-gray-600">Shri Lal Bahadur Shastri National Sanskrit University, New Delhi</p>
                   </div>
                 </div>
               </div>
