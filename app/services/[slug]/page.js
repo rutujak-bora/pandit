@@ -11,11 +11,11 @@ const servicesData = {
     title: 'Wedding Puja - Best Wedding Pandit in Delhi NCR',
     slug: 'wedding-puja',
     icon: '💑',
-    heroImage: 'https://images.pexels.com/photos/36053876/pexels-photo-36053876.jpeg',
+    heroImage: '/services/wedding-puja.png',
     gallery: [
-      'https://images.pexels.com/photos/35204633/pexels-photo-35204633.jpeg',
-      'https://images.pexels.com/photos/8751531/pexels-photo-8751531.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -120,11 +120,11 @@ const servicesData = {
     title: 'Griha Pravesh Puja - Best Pandit for Housewarming Near Me',
     slug: 'griha-pravesh',
     icon: '🏠',
-    heroImage: 'https://images.pexels.com/photos/7152003/pexels-photo-7152003.jpeg',
+    heroImage: '/services/griha-pravesh.png',
     gallery: [
-      'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg',
-      'https://images.pexels.com/photos/7181865/pexels-photo-7181865.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -229,11 +229,11 @@ const servicesData = {
     title: 'Navratri Puja (Nine Nights of Divine Mother)',
     slug: 'navratri-puja',
     icon: '🪔',
-    heroImage: 'https://images.pexels.com/photos/34473107/pexels-photo-34473107.jpeg',
+    heroImage: '/services/navratri-puja.png',
     gallery: [
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg',
-      'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg',
-      'https://images.pexels.com/photos/7181865/pexels-photo-7181865.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -343,11 +343,11 @@ const servicesData = {
     title: 'Ganesh Puja (Ganpati Sthapana)',
     slug: 'ganesh-puja',
     icon: '🙏',
-    heroImage: 'https://images.pexels.com/photos/33829504/pexels-photo-33829504.jpeg',
+    heroImage: '/services/ganesh-puja.png',
     gallery: [
-      'https://images.pexels.com/photos/33642644/pexels-photo-33642644.jpeg',
-      'https://images.unsplash.com/photo-1642744901889-9efbec703430',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -457,11 +457,11 @@ const servicesData = {
     title: 'Satyanarayan Katha (Lord Vishnu Worship)',
     slug: 'satyanarayan-katha',
     icon: '📿',
-    heroImage: 'https://images.pexels.com/photos/8751531/pexels-photo-8751531.jpeg',
+    heroImage: '/services/satyanarayan-katha.png',
     gallery: [
-      'https://images.pexels.com/photos/33362142/pexels-photo-33362142.jpeg',
-      'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -571,11 +571,11 @@ const servicesData = {
     title: 'Naamkaran Sanskar (Baby Naming Ceremony)',
     slug: 'naamkaran-sanskar',
     icon: '👶',
-    heroImage: 'https://images.pexels.com/photos/35204633/pexels-photo-35204633.jpeg',
+    heroImage: '/services/naamkaran-sanskar.png',
     gallery: [
-      'https://images.pexels.com/photos/8751531/pexels-photo-8751531.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg',
-      'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -685,11 +685,11 @@ const servicesData = {
     title: 'Vastu Shanti Puja (Space Purification)',
     slug: 'vastu-shanti',
     icon: '🧘',
-    heroImage: 'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg',
+    heroImage: '/services/vastu-shanti.png',
     gallery: [
-      'https://images.pexels.com/photos/7181865/pexels-photo-7181865.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg',
-      'https://images.pexels.com/photos/33362142/pexels-photo-33362142.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -803,11 +803,11 @@ const servicesData = {
     title: 'Pitru Paksha Shraddh (Ancestral Offerings)',
     slug: 'pitru-paksha-shraddh',
     icon: '🕉️',
-    heroImage: 'https://images.pexels.com/photos/34753111/pexels-photo-34753111.jpeg',
+    heroImage: '/services/pitru-paksha-shraddh.png',
     gallery: [
-      'https://images.pexels.com/photos/33362142/pexels-photo-33362142.jpeg',
-      'https://images.pexels.com/photos/8751531/pexels-photo-8751531.jpeg',
-      'https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg'
+      '/gallery/1.jpg',
+      '/gallery/2.jpg',
+      '/gallery/3.jpg'
     ],
     significance: {
       title: 'Meaning and Significance',

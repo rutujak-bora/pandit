@@ -1,0 +1,196 @@
+﻿diff --git a/app/layout.js b/app/layout.js
+index 1424acc..6ee12a5 100644
+--- a/app/layout.js
++++ b/app/layout.js
+@@ -4,21 +4,21 @@ import './globals.css'
+ const inter = Inter({ subsets: ['latin'] })
+ 
+ export const metadata = {
+-  title: 'Pandit Ji Services - Professional Hindu Priest for Puja in Delhi NCR | Wedding, Griha Pravesh, Navratri',
+-  description: 'Book experienced PanditSandesh Tiwari for authentic Vedic ceremonies in Delhi NCR. 15+ years experience in wedding puja, griha pravesh, navratri, ganesh puja, naamkaran, and all Hindu rituals. Available across Delhi, Gurgaon, Noida. Call +91 95807 58639',
+-  keywords: 'pandit booking delhi, hindu priest delhi ncr, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit',
++  title: 'Pandit Ji Near Me - Best Pandit for Puja in Delhi NCR | Wedding, Griha Pravesh, Satyanarayan',
++  description: 'Looking for the best Pandit ji near me? Book experienced Pandit Sandesh Tiwari for authentic Vedic ceremonies in Delhi NCR. Specializing in Wedding, Griha Pravesh, Satyanarayan Puja, and all Hindu rituals. Serving Delhi, Gurgaon, Noida, and Faridabad. Call +91 95807 58639',
++  keywords: 'pandit ji near me, best pandit in delhi, puja pandit, pandit booking delhi, online pandit booking, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit, satyanarayan puja pandit, north indian pandit, vedic puja services',
+   authors: [{ name: 'Pandit Ji Services' }],
+   openGraph: {
+-    title: 'Pandit Ji Services - Expert Hindu Priest for All Ceremonies in Delhi NCR',
+-    description: 'Experienced Pandit for wedding, griha pravesh, navratri and all Hindu pujas in Delhi NCR. Book now for authentic Vedic rituals.',
++    title: 'Pandit Ji Near Me - Expert Hindu Priest for All Ceremonies in Delhi NCR',
++    description: 'Book the best Pandit for wedding, griha pravesh, navratri and all Hindu pujas in Delhi NCR. Authentic Vedic rituals at your home.',
+     type: 'website',
+     locale: 'en_IN',
+     siteName: 'Pandit Ji Services'
+   },
+   twitter: {
+     card: 'summary_large_image',
+-    title: 'Pandit Ji Services - Professional Puja Services Delhi NCR',
+-    description: 'Book experienced Pandit for authentic Hindu ceremonies. 15+ years experience. Serving Delhi NCR.'
++    title: 'Best Pandit Ji Near Me - Professional Puja Services Delhi NCR',
++    description: 'Book experienced Pandit for authentic Hindu ceremonies. 15+ years experience. Serving Delhi, Noida, Gurgaon.'
+   },
+   robots: {
+     index: true,
+@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+         <meta name="theme-color" content="#ea580c" />
+         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>≡ƒòë∩╕Å</text></svg>" />
+-        
++
+         {/* Schema.org markup for Local Business */}
+         <script
+           type="application/ld+json"
+diff --git a/app/page.js b/app/page.js
+index ad9da36..436e101 100644
+--- a/app/page.js
++++ b/app/page.js
+@@ -110,6 +110,10 @@ const faqs = [
+     question: 'Can I get consultation for muhurat?',
+     answer: 'Yes, Pandit ji provides free muhurat consultation for all bookings. You can discuss auspicious dates and timings during the booking process.'
+   },
++  {
++    question: 'How can I find the best pandit ji near me?',
++    answer: 'Finding the best pandit ji near me is easy with our platform. We provide experienced and knowledgeable priests across Delhi, Gurgaon, Noida, and Faridabad. All our pandits are Vedic scholars with 15+ years of experience in performing authentic ceremonies.'
++  },
+   {
+     question: 'What are the payment methods?',
+     answer: 'We accept cash, UPI, bank transfer, and online payment methods. Payment details will be shared after booking confirmation.'
+@@ -507,7 +511,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
+ 
+             <div>
+               <h2 className="text-4xl font-bold text-gray-900 mb-6">
+-                About <span className="text-orange-600">PanditSandesh Tiwari</span>
++                About <span className="text-orange-600">Pandit Sandesh Tiwari</span>
+               </h2>
+               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                 A highly qualified and experienced Vedic scholar serving Delhi NCR with authentic traditional Hindu ceremonies and pujas. With deep knowledge of Vedic scriptures and rituals, Pandit ji ensures every ceremony is performed with utmost devotion and authenticity.
+@@ -713,8 +717,8 @@ Booking ID: ${data.bookingId || 'N/A'}`
+                           >
+                             <Star
+                               className={`w-8 h-8 ${star <= reviewForm.rating
+-                                  ? 'fill-orange-500 text-orange-500'
+-                                  : 'text-gray-300'
++                                ? 'fill-orange-500 text-orange-500'
++                                : 'text-gray-300'
+                                 }`}
+                             />
+                           </button>
+@@ -1044,6 +1048,46 @@ Booking ID: ${data.bookingId || 'N/A'}`
+         </div>
+       </section>
+ 
++      {/* Service Areas Section for SEO Improvement */}
++      <section className="py-16 bg-gray-50 border-t border-gray-200">
++        <div className="container mx-auto px-4">
++          <div className="grid md:grid-cols-2 gap-12">
++            <div>
++              <h2 className="text-2xl font-bold text-gray-900 mb-6">Service Areas - Finding a Pandit Ji Near Me</h2>
++              <p className="text-gray-600 leading-relaxed mb-6">
++                Looking for the <strong>best pandit ji near me</strong>? We provide authentic Vedic services across the entire Delhi NCR region. Our experienced <strong>puja pandit</strong> team is available for home ceremonies, office openings, and large-scale events.
++              </p>
++              <div className="flex flex-wrap gap-2">
++                {['Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad', 'Greater Noida', 'Dwarka', 'South Delhi', 'Rohini', 'Indirapuram'].map((area) => (
++                  <span key={area} className="bg-white border border-orange-100 px-4 py-2 rounded-lg text-sm font-medium text-orange-700 shadow-sm">
++                    Pandit in {area}
++                  </span>
++                ))}
++              </div>
++            </div>
++            <div>
++              <h3 className="text-2xl font-bold text-gray-900 mb-6">Popular Vedic Services</h3>
++              <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-600">
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Wedding Pandit Delhi</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Griha Pravesh Puja Specialist</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Satyanarayan Puja Booking</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Navratri Puja Pandit Ji</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Ganesh Puja Services</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Vastu Shanti Puja Expert</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Maha Mrityunjay Jaap</p>
++                <p className="flex items-center gap-2"><span>ΓÇó</span> Rudrabhishek Puja Online</p>
++              </div>
++              <div className="mt-8 p-4 bg-orange-100/50 rounded-xl border border-orange-200">
++                <p className="text-sm text-orange-800 font-medium text-center">
++                  Book the <strong>best pandit</strong> for your spiritual needs today.
++                  Call <a href="tel:+919580758639" className="underline">+91 95807 58639</a> for a free consultation.
++                </p>
++              </div>
++            </div>
++          </div>
++        </div>
++      </section>
++
+       {/* Footer */}
+       <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
+         <div className="container mx-auto px-4">
+@@ -1091,11 +1135,11 @@ Booking ID: ${data.bookingId || 'N/A'}`
+               <ul className="space-y-3 text-gray-400">
+                 <li className="flex items-center space-x-2">
+                   <Phone className="w-4 h-4" />
+-                  <a href="tel:+919876543210" className="hover:text-orange-400">+91 9876543210</a>
++                  <a href="tel:+919580758639" className="hover:text-orange-400">+91 95807 58639</a>
+                 </li>
+                 <li className="flex items-center space-x-2">
+                   <Mail className="w-4 h-4" />
+-                  <span>contact@panditjiservices.com</span>
++                  <a href="mailto:contact@panditjiservices.com" className="hover:text-white">contact@panditjiservices.com</a>
+                 </li>
+                 <li className="flex items-center space-x-2">
+                   <MapPin className="w-4 h-4" />
+@@ -1106,7 +1150,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
+           </div>
+ 
+           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+-            <p>&copy; 2025 Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
++            <p>&copy; {new Date().getFullYear()} Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
+           </div>
+         </div>
+       </footer>
+@@ -1124,7 +1168,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
+ 
+       {/* Floating Call Button */}
+       <a
+-        href="tel:+919876543210"
++        href="tel:+919580758639"
+         className="fixed bottom-24 right-6 z-50 bg-orange-600 hover:bg-orange-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
+         aria-label="Call Now"
+       >
+diff --git a/app/services/[slug]/page.js b/app/services/[slug]/page.js
+index 34ee423..5718b7e 100644
+--- a/app/services/[slug]/page.js
++++ b/app/services/[slug]/page.js
+@@ -8,7 +8,7 @@ import Link from 'next/link'
+ 
+ const servicesData = {
+   'wedding-puja': {
+-    title: 'Wedding Puja (Vivah Sanskar)',
++    title: 'Wedding Puja - Best Wedding Pandit in Delhi NCR',
+     slug: 'wedding-puja',
+     icon: '≡ƒÆæ',
+     heroImage: 'https://images.pexels.com/photos/36053876/pexels-photo-36053876.jpeg',
+@@ -19,7 +19,7 @@ const servicesData = {
+     ],
+     significance: {
+       title: 'Meaning and Significance',
+-      content: 'Vivah Sanskar is one of the most sacred of the 16 sanskars in Hindu tradition. It is not merely a social contract but a spiritual union of two souls ordained by the divine. The wedding ceremony is performed before Agni (sacred fire) as witness, with the belief that the bond created transcends this lifetime. The rituals symbolize the couple\'s commitment to support each other in dharma (righteousness), artha (prosperity), kama (desires), and moksha (liberation). The seven vows (Saptapadi) taken around the sacred fire represent promises for seven aspects of married life - nourishment, strength, prosperity, happiness, progeny, long life, and devotion.',
++      content: 'Vivah Sanskar is one of the most sacred rituals, and choosing the best wedding pandit in Delhi is crucial for an authentic ceremony. As an experienced wedding priest, I ensure that your union is blessed according to Vedic traditions. If you are searching for a wedding pandit ji near me, we provide complete vivah sanskar services with deep spiritual meaning. The wedding ceremony is performed before Agni (sacred fire) as witness, symbolizing the couple\'s commitment to dharma, artha, kama, and moksha.',
+       keyPoints: [
+         'Sacred union of two souls blessed by divine presence',
+         'One of the 16 essential sanskars in Hindu dharma',
+@@ -117,7 +117,7 @@ const servicesData = {
+     ]
+   },
+   'griha-pravesh': {
+-    title: 'Griha Pravesh (Housewarming Ceremony)',
++    title: 'Griha Pravesh Puja - Best Pandit for Housewarming Near Me',
+     slug: 'griha-pravesh',
+     icon: '≡ƒÅá',
+     heroImage: 'https://images.pexels.com/photos/7152003/pexels-photo-7152003.jpeg',
+@@ -128,7 +128,7 @@ const servicesData = {
+     ],
+     significance: {
+       title: 'Meaning and Significance',
+-      content: 'Griha Pravesh, meaning "entering the house," is an ancient Vedic ceremony performed when moving into a new home. This sacred ritual is believed to purify the space, remove any negative energies, and invoke divine blessings for prosperity, peace, and protection. The ceremony sanctifies the home as a temple where the family will live harmoniously. According to Vastu Shastra, every structure has its own energy, and Griha Pravesh aligns this energy with cosmic forces. The ritual includes Ganesh Puja for removing obstacles, Vastu Puja for balancing energies, and Navagraha Puja for planetary harmony.',
++      content: 'Griha Pravesh is a sacred ritual when moving into a new home. Finding an expert pandit for griha pravesh near me ensures your new home is filled with positive energy. This Vedic ceremony purifies the space and removes negative energies. If you seek the best puja pandit in Delhi NCR for your housewarming, our authentic rituals will bless your home for prosperity and peace. The ceremony includes Ganesh Puja, Vastu Puja, and Navagraha Puja for planetary harmony.',
+       keyPoints: [
+         'Purifies and sanctifies the new home environment',
+         'Removes negative energies and establishes positive vibrations',

@@ -13,56 +13,56 @@ const services = [
   {
     title: 'Wedding Puja',
     description: 'Complete Vedic wedding ceremonies with traditional rituals',
-    image: 'https://images.pexels.com/photos/36053876/pexels-photo-36053876.jpeg',
+    image: '/services/wedding-puja.png',
     icon: '💑',
     slug: 'wedding-puja'
   },
   {
     title: 'Griha Pravesh',
     description: 'Housewarming ceremonies for new home blessings',
-    image: 'https://images.pexels.com/photos/7152003/pexels-photo-7152003.jpeg',
+    image: '/services/griha-pravesh.png',
     icon: '🏠',
     slug: 'griha-pravesh'
   },
   {
     title: 'Navratri Puja',
     description: 'Nine-day Durga puja with kalash sthapana',
-    image: 'https://images.pexels.com/photos/34473107/pexels-photo-34473107.jpeg',
+    image: '/services/navratri-puja.png',
     icon: '🪔',
     slug: 'navratri-puja'
   },
   {
     title: 'Ganesh Puja',
     description: 'Ganpati sthapana and puja for auspicious beginnings',
-    image: 'https://images.pexels.com/photos/33829504/pexels-photo-33829504.jpeg',
+    image: '/services/ganesh-puja.png',
     icon: '🙏',
     slug: 'ganesh-puja'
   },
   {
     title: 'Satyanarayan Katha',
     description: 'Sacred katha for prosperity and peace',
-    image: 'https://images.pexels.com/photos/8751531/pexels-photo-8751531.jpeg',
-    icon: '📿',
+    image: '/services/satyanarayan-katha.png',
+    icon: '𓓿',
     slug: 'satyanarayan-katha'
   },
   {
     title: 'Naamkaran Sanskar',
     description: 'Traditional baby naming ceremony',
-    image: 'https://images.pexels.com/photos/35204633/pexels-photo-35204633.jpeg',
+    image: '/services/naamkaran-sanskar.png',
     icon: '👶',
     slug: 'naamkaran-sanskar'
   },
   {
     title: 'Vastu Shanti',
     description: 'Vastu correction and peace rituals',
-    image: 'https://images.pexels.com/photos/6315702/pexels-photo-6315702.jpeg',
+    image: '/services/vastu-shanti.png',
     icon: '🧭',
     slug: 'vastu-shanti'
   },
   {
     title: 'Pitru Paksha Shraddh',
     description: 'Ancestral offerings and tarpan rituals',
-    image: 'https://images.pexels.com/photos/34753111/pexels-photo-34753111.jpeg',
+    image: '/services/pitru-paksha-shraddh.png',
     icon: '🕉️',
     slug: 'pitru-paksha-shraddh'
   }
@@ -822,25 +822,25 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="https://images.pexels.com/photos/36053876/pexels-photo-36053876.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/1.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Wedding Ceremony</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="https://images.pexels.com/photos/33829504/pexels-photo-33829504.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/2.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Ganesh Puja</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="https://images.pexels.com/photos/34473107/pexels-photo-34473107.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/3.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Navratri Puja</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="https://images.pexels.com/photos/31104752/pexels-photo-31104752.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/4.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Diya Lighting</span>
               </div>
