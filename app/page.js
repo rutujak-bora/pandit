@@ -524,14 +524,14 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 <div className="flex items-start space-x-3 bg-orange-50 p-3 rounded-lg border border-orange-100">
                   <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-bold text-gray-900">“Ved Vibhushan” Award</h4>
+                    <h4 className="font-bold text-gray-900">Ved Vibhushan Award</h4>
                     <p className="text-sm text-gray-600">Honored by the Ministry of Education, Delhi</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <Award className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">“Acharya” in Navyavyakaran</h4>
+                    <h4 className="font-semibold text-gray-900">Acharya in Navyavyakaran</h4>
                     <p className="text-sm text-gray-600">Sampurnanand Sanskrit Vishwavidyalay, Varanasi</p>
                   </div>
                 </div>
