@@ -11,11 +11,11 @@ const servicesData = {
     title: 'Wedding Puja - Best Wedding Pandit in Delhi NCR',
     slug: 'wedding-puja',
     icon: '💑',
-    heroImage: '/services/wedding-puja.png',
+    heroImage: '/services/wedding-puja.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -120,11 +120,11 @@ const servicesData = {
     title: 'Griha Pravesh Puja - Best Pandit for Housewarming Near Me',
     slug: 'griha-pravesh',
     icon: '🏠',
-    heroImage: '/services/griha-pravesh.png',
+    heroImage: '/services/griha-pravesh.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -229,11 +229,11 @@ const servicesData = {
     title: 'Navratri Puja (Nine Nights of Divine Mother)',
     slug: 'navratri-puja',
     icon: '🪔',
-    heroImage: '/services/navratri-puja.png',
+    heroImage: '/services/navratri-puja.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -343,11 +343,11 @@ const servicesData = {
     title: 'Ganesh Puja (Ganpati Sthapana)',
     slug: 'ganesh-puja',
     icon: '🙏',
-    heroImage: '/services/ganesh-puja.png',
+    heroImage: '/services/ganesh-puja.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -457,11 +457,11 @@ const servicesData = {
     title: 'Satyanarayan Katha (Lord Vishnu Worship)',
     slug: 'satyanarayan-katha',
     icon: '📿',
-    heroImage: '/services/satyanarayan-katha.png',
+    heroImage: '/services/satyanarayan-katha.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -571,11 +571,11 @@ const servicesData = {
     title: 'Naamkaran Sanskar (Baby Naming Ceremony)',
     slug: 'naamkaran-sanskar',
     icon: '👶',
-    heroImage: '/services/naamkaran-sanskar.png',
+    heroImage: '/services/naamkaran-sanskar.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -685,11 +685,11 @@ const servicesData = {
     title: 'Vastu Shanti Puja (Space Purification)',
     slug: 'vastu-shanti',
     icon: '🧘',
-    heroImage: '/services/vastu-shanti.png',
+    heroImage: '/services/vastu-shanti.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',
@@ -803,11 +803,11 @@ const servicesData = {
     title: 'Pitru Paksha Shraddh (Ancestral Offerings)',
     slug: 'pitru-paksha-shraddh',
     icon: '🕉️',
-    heroImage: '/services/pitru-paksha-shraddh.png',
+    heroImage: '/services/pitru-paksha-shraddh.jpeg',
     gallery: [
-      '/gallery/1.jpg',
-      '/gallery/2.jpg',
-      '/gallery/3.jpg'
+      '/gallery/1.jpeg',
+      '/gallery/2.jpeg',
+      '/gallery/3.jpeg'
     ],
     significance: {
       title: 'Meaning and Significance',

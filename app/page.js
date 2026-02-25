@@ -13,56 +13,56 @@ const services = [
   {
     title: 'Wedding Puja',
     description: 'Complete Vedic wedding ceremonies with traditional rituals',
-    image: '/services/wedding-puja.png',
+    image: '/services/wedding-puja.jpeg',
     icon: '💑',
     slug: 'wedding-puja'
   },
   {
     title: 'Griha Pravesh',
     description: 'Housewarming ceremonies for new home blessings',
-    image: '/services/griha-pravesh.png',
+    image: '/services/griha-pravesh.jpeg',
     icon: '🏠',
     slug: 'griha-pravesh'
   },
   {
     title: 'Navratri Puja',
     description: 'Nine-day Durga puja with kalash sthapana',
-    image: '/services/navratri-puja.png',
+    image: '/services/navratri-puja.jpeg',
     icon: '🪔',
     slug: 'navratri-puja'
   },
   {
     title: 'Ganesh Puja',
     description: 'Ganpati sthapana and puja for auspicious beginnings',
-    image: '/services/ganesh-puja.png',
+    image: '/services/ganesh-puja.jpeg',
     icon: '🙏',
     slug: 'ganesh-puja'
   },
   {
     title: 'Satyanarayan Katha',
     description: 'Sacred katha for prosperity and peace',
-    image: '/services/satyanarayan-katha.png',
+    image: '/services/satyanarayan-katha.jpeg',
     icon: '𓓿',
     slug: 'satyanarayan-katha'
   },
   {
     title: 'Naamkaran Sanskar',
     description: 'Traditional baby naming ceremony',
-    image: '/services/naamkaran-sanskar.png',
+    image: '/services/naamkaran-sanskar.jpeg',
     icon: '👶',
     slug: 'naamkaran-sanskar'
   },
   {
     title: 'Vastu Shanti',
     description: 'Vastu correction and peace rituals',
-    image: '/services/vastu-shanti.png',
+    image: '/services/vastu-shanti.jpeg',
     icon: '🧭',
     slug: 'vastu-shanti'
   },
   {
     title: 'Pitru Paksha Shraddh',
     description: 'Ancestral offerings and tarpan rituals',
-    image: '/services/pitru-paksha-shraddh.png',
+    image: '/services/pitru-paksha-shraddh.jpeg',
     icon: '🕉️',
     slug: 'pitru-paksha-shraddh'
   }
@@ -822,25 +822,25 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/1.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/1.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Wedding Ceremony</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/2.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/2.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Ganesh Puja</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/3.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/3.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Navratri Puja</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/4.jpg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/gallery/4.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span className="text-white font-semibold">Diya Lighting</span>
               </div>
