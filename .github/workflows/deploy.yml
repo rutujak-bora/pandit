@@ -46,6 +46,10 @@ jobs:
             
             npm run build
             
+            # Update Nginx configuration
+            sudo cp nginx_default.conf /etc/nginx/sites-available/default
+            sudo nginx -t && sudo systemctl restart nginx
+            
             # Restart with PM2
             pm2 delete pandit-web || true
             pm2 start "npm run start" --name pandit-web
