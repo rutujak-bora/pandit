@@ -32,11 +32,10 @@ export const metadata = {
     }
   },
   verification: {
-    // Add your Google Search Console verification code here
-    // google: 'your-verification-code'
+    google: '9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU'
   },
   alternates: {
-    canonical: 'https://pandit-booking-7.preview.emergentagent.com'
+    canonical: 'https://poojapandits.com'
   }
 }
 
@@ -58,8 +57,8 @@ export default function RootLayout({ children }) {
               name: 'Pandit Ji Services',
               description: 'Professional Hindu priest services for all Vedic ceremonies and pujas',
               image: 'https://images.unsplash.com/photo-1703045199207-5312874d9e54',
-              '@id': 'https://pandit-booking-7.preview.emergentagent.com',
-              url: 'https://pandit-booking-7.preview.emergentagent.com',
+              '@id': 'https://poojapandits.com',
+              url: 'https://poojapandits.com',
               telephone: '+919580758639',
               email: 'contact@panditjiservices.com',
               address: {
