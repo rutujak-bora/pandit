@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="google-site-verification" content="9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU" />
         <meta name="theme-color" content="#ea580c" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
 
