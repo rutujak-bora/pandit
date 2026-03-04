@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
               '@type': 'LocalBusiness',
               name: 'Pandit Ji Services',
               description: 'Professional Hindu priest services for all Vedic ceremonies and pujas',
-              image: 'https://images.unsplash.com/photo-1703045199207-5312874d9e54',
+              image: 'https://poojapandits.com/new-bg.jpeg',
               '@id': 'https://poojapandits.com',
               url: 'https://poojapandits.com',
               telephone: '+919580758639',
