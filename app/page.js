@@ -346,7 +346,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[zoomIn_20s_ease-in-out_infinite_alternate]"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1703045199207-5312874d9e54)',
+            backgroundImage: 'url(/new-bg.jpeg)',
             filter: 'brightness(0.35)'
           }}
         />
