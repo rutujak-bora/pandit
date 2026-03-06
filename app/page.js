@@ -1159,6 +1159,21 @@ Booking ID: ${data.bookingId || 'N/A'}`
             </div>
           </div>
 
+          <div className="border-t border-gray-700 mt-8 pt-8">
+            <div className="max-w-4xl mx-auto">
+              <h4 className="text-gray-400 text-sm font-semibold mb-3">Popular Searches & Keywords in Delhi NCR</h4>
+              <p className="text-gray-500 text-xs leading-relaxed flex flex-wrap gap-2">
+                <span>Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari</span>
+                <span className="text-gray-600">|</span>
+                <span>Book Pandit for Ganpati puja, griha pravesh puja</span>
+                <span className="text-gray-600">|</span>
+                <span>Pandit for annaprashan puja, naming ceremony- Book now</span>
+                <span className="text-gray-600">|</span>
+                <span>Contact us - Pandit Ji Delhi</span>
+              </p>
+            </div>
+          </div>
+
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
           </div>

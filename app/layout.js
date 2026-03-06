@@ -4,21 +4,21 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Pandit Ji Near Me - Best Pandit for Puja in Delhi NCR | Wedding, Griha Pravesh, Satyanarayan',
-  description: 'Looking for the best Pandit ji near me? Book experienced Pandit Sandesh Tiwari for authentic Vedic ceremonies in Delhi NCR. Specializing in Wedding, Griha Pravesh, Satyanarayan Puja, and all Hindu rituals. Serving Delhi, Gurgaon, Noida, and Faridabad. Call +91 95807 58639',
-  keywords: 'pandit ji near me, best pandit in delhi, puja pandit, pandit booking delhi, online pandit booking, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit, satyanarayan puja pandit, north indian pandit, vedic puja services',
-  authors: [{ name: 'Pandit Ji Services' }],
+  title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
+  description: 'Book Pandit for Ganpati puja, griha pravesh puja, annaprashan puja, naming ceremony- Book now. Contact us - Pandit Ji Delhi. Best Pandit ji near me. Authentic Vedic ceremonies in Delhi NCR.',
+  keywords: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari, Book Pandit for Ganpati puja, griha pravesh puja, Pandit for annaprashan puja, naming ceremony- Book now, Contact us - Pandit Ji Delhi, pandit ji near me, best pandit in delhi, puja pandit, pandit booking delhi, online pandit booking, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit, satyanarayan puja pandit, north indian pandit, vedic puja services',
+  authors: [{ name: 'Pandit Sandesh Tiwari' }],
   openGraph: {
-    title: 'Pandit Ji Near Me - Expert Hindu Priest for All Ceremonies in Delhi NCR',
-    description: 'Book the best Pandit for wedding, griha pravesh, navratri and all Hindu pujas in Delhi NCR. Authentic Vedic rituals at your home.',
+    title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
+    description: 'Book Pandit for Ganpati puja, griha pravesh puja, annaprashan puja, naming ceremony- Book now. Contact us - Pandit Ji Delhi.',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Pandit Ji Services'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Pandit Ji Near Me - Professional Puja Services Delhi NCR',
-    description: 'Book experienced Pandit for authentic Hindu ceremonies. 15+ years experience. Serving Delhi, Noida, Gurgaon.'
+    title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
+    description: 'Book Pandit for Ganpati puja, griha pravesh puja. Contact us - Pandit Ji Delhi. Authentic Hindu ceremonies.'
   },
   robots: {
     index: true,
