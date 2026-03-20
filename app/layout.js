@@ -4,21 +4,32 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
-  description: 'Book Pandit for Ganpati puja, griha pravesh puja, annaprashan puja, naming ceremony- Book now. Contact us - Pandit Ji Delhi. Best Pandit ji near me. Authentic Vedic ceremonies in Delhi NCR.',
-  keywords: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari, Book Pandit for Ganpati puja, griha pravesh puja, Pandit for annaprashan puja, naming ceremony- Book now, Contact us - Pandit Ji Delhi, pandit ji near me, best pandit in delhi, puja pandit, pandit booking delhi, online pandit booking, wedding pandit, griha pravesh puja, navratri puja, pandit ji delhi, vedic ceremonies, puja services delhi, pandit in gurgaon, pandit in noida, marriage pandit, housewarming puja, ganesh puja pandit, satyanarayan puja pandit, north indian pandit, vedic puja services',
+  metadataBase: new URL('https://poojapandits.com'),
+  title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
+  description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh, and Vedic Pujas. Honored with Ved Vibhushan Award. Authentic rituals by Pandit Sandesh Tiwari.',
+  keywords: 'Top Pandit Ji in Delhi NCR, Best Pandit in Delhi, Puja Services Noida, Wedding Pandit Gurgaon, North Indian Pandit Delhi, Vedic Puja Services Delhi NCR, Pandit for Griha Pravesh, Pandit for Wedding',
   authors: [{ name: 'Pandit Sandesh Tiwari' }],
   openGraph: {
-    title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
-    description: 'Book Pandit for Ganpati puja, griha pravesh puja, annaprashan puja, naming ceremony- Book now. Contact us - Pandit Ji Delhi.',
+    title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
+    description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh, and Vedic Pujas. Expert Vedic ceremonies in Delhi region.',
     type: 'website',
+    url: 'https://poojapandits.com',
     locale: 'en_IN',
-    siteName: 'Pandit Ji Services'
+    siteName: 'Pandit Ji Services',
+    images: [
+      {
+        url: '/new-bg.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Pandit Sandesh Tiwari - Best Pandit Ji in Delhi NCR',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari',
-    description: 'Book Pandit for Ganpati puja, griha pravesh puja. Contact us - Pandit Ji Delhi. Authentic Hindu ceremonies.'
+    title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
+    description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh. Authentic Hindu ceremonies.',
+    images: ['/new-bg.jpeg'],
   },
   robots: {
     index: true,
@@ -36,18 +47,24 @@ export const metadata = {
   },
   alternates: {
     canonical: 'https://poojapandits.com'
+  },
+  icons: {
+    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🕉️</text></svg>',
   }
+}
+
+export const viewport = {
+  themeColor: '#ea580c',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="google-site-verification" content="9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU" />
-        <meta name="theme-color" content="#ea580c" />
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
-
+      <body className={inter.className}>
+        {children}
         {/* Schema.org markup for Local Business */}
         <script
           type="application/ld+json"
@@ -55,8 +72,8 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
-              name: 'Pandit Ji Services',
-              description: 'Professional Hindu priest services for all Vedic ceremonies and pujas',
+              name: 'Pandit Sandesh Tiwari - Best Pandit Ji in Delhi NCR',
+              description: 'Professional Hindu priest services for all Vedic ceremonies and pujas in Delhi NCR.',
               image: 'https://poojapandits.com/new-bg.jpeg',
               '@id': 'https://poojapandits.com',
               url: 'https://poojapandits.com',
@@ -76,13 +93,7 @@ export default function RootLayout({ children }) {
               openingHoursSpecification: {
                 '@type': 'OpeningHoursSpecification',
                 dayOfWeek: [
-                  'Monday',
-                  'Tuesday',
-                  'Wednesday',
-                  'Thursday',
-                  'Friday',
-                  'Saturday',
-                  'Sunday'
+                  'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
                 ],
                 opens: '06:00',
                 closes: '21:00'
@@ -93,43 +104,15 @@ export default function RootLayout({ children }) {
                 ratingValue: '4.9',
                 reviewCount: '500'
               },
-              areaServed: [
-                {
-                  '@type': 'City',
-                  name: 'Delhi'
-                },
-                {
-                  '@type': 'City',
-                  name: 'Gurgaon'
-                },
-                {
-                  '@type': 'City',
-                  name: 'Noida'
-                },
-                {
-                  '@type': 'City',
-                  name: 'Faridabad'
-                },
-                {
-                  '@type': 'City',
-                  name: 'Ghaziabad'
-                }
-              ],
+              areaServed: ['Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad'],
               serviceType: [
-                'Wedding Ceremony',
-                'Griha Pravesh',
-                'Navratri Puja',
-                'Ganesh Puja',
-                'Naamkaran Sanskar',
-                'Satyanarayan Katha',
-                'Vastu Shanti',
-                'Hindu Rituals'
+                'Wedding Ceremony', 'Griha Pravesh', 'Navratri Puja', 'Ganesh Puja',
+                'Naamkaran Sanskar', 'Satyanarayan Katha', 'Vastu Shanti', 'Hindu Rituals'
               ]
             })
           }}
         />
-      </head>
-      <body className={inter.className}>{children}</body>
+      </body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube } from 'lucide-react'
 import Link from 'next/link'
 
 const services = [
@@ -23,6 +23,13 @@ const services = [
     image: '/services/griha-pravesh.jpeg',
     icon: '🏠',
     slug: 'griha-pravesh'
+  },
+  {
+    title: 'New office opening',
+    description: 'Auspicious puja for new business and office beginnings',
+    image: '/services/office-opening.png',
+    icon: '🏢',
+    slug: 'office-opening'
   },
   {
     title: 'Navratri Puja',
@@ -119,6 +126,129 @@ const faqs = [
     answer: 'We accept cash, UPI, bank transfer, and online payment methods. Payment details will be shared after booking confirmation.'
   }
 ]
+
+const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submitMessage, services, title, description, compact = false }) => (
+  <Card className={`shadow-2xl border-2 border-orange-100/50 ${compact ? 'bg-white/95 backdrop-blur-md' : 'bg-white'}`}>
+    <CardHeader className={compact ? 'pb-4' : ''}>
+      <CardTitle className={`text-orange-700 ${compact ? 'text-2xl font-bold' : 'text-3xl font-bold'}`}>{title || 'Quick Booking'}</CardTitle>
+      <CardDescription className={compact ? 'text-sm text-gray-600' : 'text-gray-600'}>
+        {description || "Book your puja in seconds"}
+      </CardDescription>
+    </CardHeader>
+    <CardContent className={compact ? 'pt-0 space-y-4' : 'pt-0 space-y-5'}>
+      <form onSubmit={handleSubmit} className={compact ? 'space-y-4' : 'space-y-5'}>
+        <div className="space-y-4">
+          <div className="relative">
+            <Input
+              type="text"
+              name="name"
+              placeholder="Full Name *"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
+            />
+          </div>
+          <div className="relative">
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number *"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
+            />
+          </div>
+          <div className="relative">
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              required
+              className={`w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50/30 text-gray-700 ${compact ? 'h-11' : 'h-12'}`}
+            >
+              <option value="">Select Puja Type *</option>
+              {services.map((service, index) => (
+                <option key={index} value={service.title}>{service.title}</option>
+              ))}
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          {!compact && (
+            <div className="grid grid-cols-2 gap-4">
+              <Input
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
+              />
+              <Input
+                type="time"
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+                className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
+              />
+            </div>
+          )}
+
+          <div className="relative">
+            <Textarea
+              name="address"
+              placeholder="Location/Address"
+              value={formData.address}
+              onChange={handleChange}
+              rows={compact ? 2 : 3}
+              className="border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 resize-none"
+            />
+          </div>
+
+          {!compact && (
+            <div className="relative">
+              <Textarea
+                name="message"
+                placeholder="Special Requirements (Optional)"
+                value={formData.message}
+                onChange={handleChange}
+                rows={3}
+                className="border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 resize-none"
+              />
+            </div>
+          )}
+        </div>
+
+        {submitMessage && (
+          <div className={`p-4 rounded-xl text-sm font-medium animate-fade-in ${submitMessage.includes('✅') ? 'bg-green-100 text-green-800 border-2 border-green-200' : 'bg-red-100 text-red-800 border-2 border-red-200'}`}>
+            {submitMessage}
+          </div>
+        )}
+
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className={`w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold text-lg shadow-xl transform active:scale-[0.98] transition-all py-6 rounded-xl ${compact ? 'h-14' : 'h-16'}`}
+        >
+          {isSubmitting ? (
+            <span className="flex items-center gap-2">
+              <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
+              Submitting...
+            </span>
+          ) : (
+            <span className="flex items-center justify-center gap-2">
+              Confirm Booking <CheckCircle2 className="w-5 h-5" />
+            </span>
+          )}
+        </Button>
+        <p className="text-[10px] text-center text-gray-400 mt-2 italic">
+          * Your information is secure and will be used only for booking.
+        </p>
+      </form>
+    </CardContent>
+  </Card>
+)
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -291,7 +421,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 🕉️
               </div>
               <div>
-                <h1 className="text-xl md:text-2xl font-bold text-orange-600">Pandit Ji Services</h1>
+                <p className="text-xl md:text-2xl font-bold text-orange-600">Pandit Ji Services</p>
                 <p className="text-xs text-gray-600">Delhi NCR</p>
               </div>
             </div>
@@ -340,8 +470,8 @@ Booking ID: ${data.bookingId || 'N/A'}`
         </div>
       </header>
 
-      {/* Hero Section - Enhanced Design */}
-      <section id="home" className="relative min-h-[700px] md:min-h-[800px] flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Enhanced Design with Contact Form */}
+      <section id="home" className="relative min-h-[850px] lg:min-h-[900px] flex items-center justify-center overflow-hidden pt-12 md:pt-20">
         {/* Animated Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[zoomIn_20s_ease-in-out_infinite_alternate]"
@@ -352,10 +482,11 @@ Booking ID: ${data.bookingId || 'N/A'}`
         />
 
         {/* Gradient Overlays for Depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/90 via-red-800/80 to-orange-900/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/95 via-red-900/80 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
 
         {/* Decorative Elements */}
+        {/* ... existing mandalas ... */}
         <div className="absolute top-10 left-10 w-32 h-32 opacity-10 animate-spin-slow">
           <img src="https://images.pexels.com/photos/7181865/pexels-photo-7181865.jpeg" alt="Mandala" className="w-full h-full object-contain" />
         </div>
@@ -364,80 +495,101 @@ Booking ID: ${data.bookingId || 'N/A'}`
         </div>
 
         {/* Floating Diya Elements */}
-        <div className="absolute top-20 right-1/4 w-16 h-16 opacity-20 animate-float">
+        <div className="absolute top-20 right-1/4 w-16 h-16 opacity-20 animate-float hidden md:block">
           <span className="text-6xl">🪔</span>
         </div>
-        <div className="absolute bottom-32 left-1/4 w-16 h-16 opacity-20 animate-float-delayed">
+        <div className="absolute bottom-32 left-1/4 w-16 h-16 opacity-20 animate-float-delayed hidden md:block">
           <span className="text-6xl">🪔</span>
         </div>
 
-        {/* Main Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-5xl mx-auto">
-            {/* Animated Top Badge */}
-            <div className="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-300/30 rounded-full px-6 py-2 mb-8 animate-fade-in-down">
-              <span className="text-2xl animate-pulse">🕉️</span>
-              <span className="text-orange-200 font-semibold">Authentic Vedic Rituals</span>
-              <span className="text-2xl animate-pulse">🕉️</span>
+        {/* Main Content Grid */}
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text Content */}
+            <div className="text-left animate-fade-in">
+              {/* Animated Top Badge */}
+              <div className="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-300/30 rounded-full px-6 py-2 mb-8">
+                <span className="text-2xl animate-pulse">🕉️</span>
+                <span className="text-orange-200 font-semibold tracking-wide">Authentic Vedic Rituals</span>
+                <span className="text-2xl animate-pulse">🕉️</span>
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] text-white">
+                <span className="block drop-shadow-2xl">Traditional Vedic</span>
+                <span className="block bg-gradient-to-r from-orange-300 via-yellow-200 to-orange-400 bg-clip-text text-transparent animate-gradient-x text-6xl md:text-8xl py-2">
+                  Top Pandit Ji
+                </span>
+                <span className="block text-orange-200 text-3xl md:text-4xl mt-2 font-light tracking-tight italic">
+                  Serving all Delhi NCR
+                </span>
+              </h1>
+
+              <p className="text-orange-50/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
+                Connect with highly learned Saryuparin Brahman associated with Ayodhya Math for profound devotion and authentic rituals.
+              </p>
+
+              {/* Stat Highlights */}
+              <div className="flex flex-wrap gap-6 mb-12 text-orange-100 text-base md:text-lg">
+                <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                  <Award className="w-6 h-6 text-yellow-400" />
+                  <div className="flex flex-col">
+                    <span className="font-bold">15+ Years</span>
+                    <span className="text-xs opacity-70 uppercase tracking-tighter">Experience</span>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
+                  <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
+                  <div className="flex flex-col">
+                    <span className="font-bold">4.9/5.0</span>
+                    <span className="text-xs opacity-70 uppercase tracking-tighter">Google Rating</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Contact Buttons */}
+              <div className="flex flex-col sm:flex-row gap-5 mb-12">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-green-500/40 transform hover:-translate-y-1 transition-all duration-300 py-7 text-lg rounded-2xl">
+                    <MessageCircle className="w-6 h-6 mr-3 animate-bounce" />
+                    WhatsApp
+                  </Button>
+                </a>
+                <a href="tel:+919580758639" className="flex-1">
+                  <Button size="lg" className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md shadow-xl transform hover:-translate-y-1 transition-all duration-300 py-7 text-lg rounded-2xl">
+                    <Phone className="w-6 h-6 mr-3" />
+                    Call Now
+                  </Button>
+                </a>
+              </div>
             </div>
 
-            {/* Main Heading with Gradient Text */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
-              <span className="block text-white drop-shadow-2xl">Traditional Vedic</span>
-              <span className="block bg-gradient-to-r from-orange-300 via-yellow-200 to-orange-300 bg-clip-text text-transparent animate-gradient-x text-6xl md:text-8xl">
-                Puja Services
-              </span>
-              <span className="block text-orange-200 text-3xl md:text-4xl mt-4 font-light">In Delhi NCR</span>
-            </h1>
-
-            {/* Subtitle with Icons */}
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-10 text-orange-100 text-lg md:text-xl animate-fade-in-up">
-              <div className="flex items-center space-x-2">
-                <Award className="w-6 h-6 text-yellow-400" />
-                <span>15+ Years Experience</span>
-              </div>
-              <span className="text-orange-400">•</span>
-              <div className="flex items-center space-x-2">
-                <Users className="w-6 h-6 text-yellow-400" />
-                <span>5000+ Pujas</span>
-              </div>
-              <span className="text-orange-400">•</span>
-              <div className="flex items-center space-x-2">
-                <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-                <span>4.9 Rating</span>
-              </div>
+            {/* Right Column: High Conversion Booking Form */}
+            <div className="animate-fade-in-right hidden lg:block">
+              <BookingForm
+                formData={formData}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                isSubmitting={isSubmitting}
+                submitMessage={submitMessage}
+                services={services}
+                compact={true}
+                title="Book Your Puja"
+                description="Instant confirmation & free consultation"
+              />
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-fade-in-up-delayed">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300 px-8 py-6 text-lg w-full sm:w-auto">
-                  <MessageCircle className="w-6 h-6 mr-3 animate-bounce" />
-                  WhatsApp Booking
-                </Button>
-              </a>
-              <a href="tel:+919580758639">
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white shadow-2xl hover:shadow-orange-500/50 transform hover:scale-105 transition-all duration-300 px-8 py-6 text-lg w-full sm:w-auto">
-                  <Phone className="w-6 h-6 mr-3" />
-                  Call: +91 95807 58639
-                </Button>
-              </a>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="mt-12 flex flex-wrap justify-center gap-6 text-orange-200 text-sm animate-fade-in">
-              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle2 className="w-5 h-5 text-green-400" />
-                <span>Certified Vedic Scholar</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle2 className="w-5 h-5 text-green-400" />
-                <span>All Samagri Available</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-                <CheckCircle2 className="w-5 h-5 text-green-400" />
-                <span>Free Muhurat Consultation</span>
-              </div>
+            {/* Mobile View Social Proof Badge */}
+            <div className="lg:hidden animate-fade-in-up mt-8">
+              <BookingForm
+                formData={formData}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                isSubmitting={isSubmitting}
+                submitMessage={submitMessage}
+                services={services}
+                compact={true}
+                title="Instant Booking"
+              />
             </div>
           </div>
         </div>
@@ -455,7 +607,6 @@ Booking ID: ${data.bookingId || 'N/A'}`
             <path fill="url(#waveGradient)" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
           </svg>
         </div>
-
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
           <div className="flex flex-col items-center text-white/70">
@@ -907,7 +1058,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <a href="tel:+919876543210" className="text-orange-600 hover:underline">+91 9876543210</a>
+                    <a href="tel:+919876543210" className="text-orange-600 hover:underline">+91 95807 58639</a>
                   </div>
                 </div>
 
@@ -917,7 +1068,7 @@ Booking ID: ${data.bookingId || 'N/A'}`
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">+91 9876543210</a>
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">+91 95807 58639</a>
                   </div>
                 </div>
 
@@ -951,108 +1102,16 @@ Booking ID: ${data.bookingId || 'N/A'}`
             </div>
 
             <div>
-              <Card className="shadow-xl border-2 border-orange-100">
-                <CardHeader>
-                  <CardTitle>Booking Form</CardTitle>
-                  <CardDescription>Fill in your details and we'll get back to you</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <Input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name *"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number *"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-                    <div>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                      >
-                        <option value="">Select Puja Type *</option>
-                        {services.map((service, index) => (
-                          <option key={index} value={service.title}>{service.title}</option>
-                        ))}
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                    <div>
-                      <Input
-                        type="date"
-                        name="date"
-                        placeholder="Preferred Date"
-                        value={formData.date}
-                        onChange={handleChange}
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        type="time"
-                        name="time"
-                        placeholder="Preferred Time"
-                        value={formData.time}
-                        onChange={handleChange}
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-                    <div>
-                      <Textarea
-                        name="address"
-                        placeholder="Full Address"
-                        value={formData.address}
-                        onChange={handleChange}
-                        rows={2}
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-                    <div>
-                      <Textarea
-                        name="message"
-                        placeholder="Additional Details (Optional)"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={4}
-                        className="border-orange-200 focus:border-orange-400"
-                      />
-                    </div>
-
-                    {submitMessage && (
-                      <div className={`p-4 rounded-lg ${submitMessage.includes('Redirecting') ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
-                        {submitMessage}
-                      </div>
-                    )}
-
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-orange-600 hover:bg-orange-700 text-white"
-                      size="lg"
-                    >
-                      {isSubmitting ? 'Submitting...' : 'Submit Booking Request'}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+              <BookingForm
+                formData={formData}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                isSubmitting={isSubmitting}
+                submitMessage={submitMessage}
+                services={services}
+                title="Detailed Booking"
+                description="Please provide as much information as possible"
+              />
             </div>
           </div>
         </div>
@@ -1109,9 +1168,20 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 </div>
                 <h3 className="text-xl font-bold">Pandit Ji Services</h3>
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-6">
                 Authentic Vedic ceremonies and pujas across Delhi NCR with 15+ years of experience.
               </p>
+              <div className="flex space-x-4">
+                <a href="https://www.instagram.com/pandit_sandesh_tiwari" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="https://www.facebook.com/share/1CcFDtHz9f/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a href="https://youtube.com/@pandit_sandesh_tiwari?si=8FbR8wnphC4wtAjG" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Youtube className="w-7 h-7 -mt-0.5" />
+                </a>
+              </div>
             </div>
 
             <div>

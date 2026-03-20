@@ -104,6 +104,17 @@ code {
     }
 }
 
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .animate-zoomIn {
     animation: zoomIn 20s ease-in-out infinite alternate;
 }
@@ -130,6 +141,10 @@ code {
 
 .animate-fade-in-up-delayed {
     animation: fade-in-up 1.2s ease-out 0.6s backwards;
+}
+
+.animate-fade-in-right {
+    animation: fade-in-right 1.2s ease-out 0.4s backwards;
 }
 
 .animate-gradient-x {

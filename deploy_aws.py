@@ -3,7 +3,7 @@ import os
 import sys
 
 # Configuration
-PEM_FILE = r"C:\Users\Admin\Downloads\pn-front.pem"
+PEM_FILE = r"C:\Users\Admin\Downloads\project\pandit\pn-front.pem"
 REMOTE_USER = "ubuntu"
 REMOTE_HOST = "16.170.163.123"
 PROJECT_DIR = "/home/ubuntu/pandit_website"
