@@ -158,7 +158,7 @@ Automatic deployment on every push to `main`. Requires these **GitHub Secrets**:
 ## 📞 Contact
 
 **Pandit Sandesh Tiwari**
-- 📱 Phone / WhatsApp: [+91 95807 58639](https://wa.me/919580758639)
+- 📱 Phone / WhatsApp: [+91 9359342994](https://wa.me/919359342994)
 - 🌐 Website: [poojapandits.com](https://poojapandits.com)
 - 📍 Delhi NCR (Delhi, Gurgaon, Noida, Faridabad, Ghaziabad)
 
