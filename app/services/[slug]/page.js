@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  const baseUrl = 'https://poojapandits.com'
+  const baseUrl = 'https://www.poojapandits.com'
   const imageUrl = service.heroImage.startsWith('http') ? service.heroImage : `${baseUrl}${service.heroImage}`
 
   return {

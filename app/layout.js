@@ -4,7 +4,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('https://poojapandits.com'),
+  metadataBase: new URL('https://www.poojapandits.com'),
   title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
   description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh, and Vedic Pujas. Honored with Ved Vibhushan Award. Authentic rituals by Pandit Sandesh Tiwari.',
   keywords: 'Top Pandit Ji in Delhi NCR, Best Pandit in Delhi, Puja Services Noida, Wedding Pandit Gurgaon, North Indian Pandit Delhi, Vedic Puja Services Delhi NCR, Pandit for Griha Pravesh, Pandit for Wedding',
@@ -13,12 +13,12 @@ export const metadata = {
     title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
     description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh, and Vedic Pujas. Expert Vedic ceremonies in Delhi region.',
     type: 'website',
-    url: 'https://poojapandits.com',
+    url: 'https://www.poojapandits.com',
     locale: 'en_IN',
     siteName: 'Pandit Ji Services',
     images: [
       {
-        url: '/new-bg.jpeg',
+        url: 'https://www.poojapandits.com/new-bg.jpeg',
         width: 1200,
         height: 630,
         alt: 'Pandit Sandesh Tiwari - Best Pandit Ji in Delhi NCR',
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Top Pandit Ji in Delhi NCR for Puja & Weddings – Sandesh Tiwari',
     description: 'Book the best Pandit Ji in Delhi NCR for Wedding, Griha Pravesh. Authentic Hindu ceremonies.',
-    images: ['/new-bg.jpeg'],
+    images: ['https://www.poojapandits.com/new-bg.jpeg'],
   },
   robots: {
     index: true,
@@ -43,10 +43,13 @@ export const metadata = {
     }
   },
   verification: {
-    google: '9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU'
+    google: '9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU',
+    other: {
+      'msvalidate.01': 'YOUR_BING_VERIFICATION_CODE'
+    }
   },
   alternates: {
-    canonical: 'https://poojapandits.com'
+    canonical: 'https://www.poojapandits.com'
   },
   icons: {
     icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🕉️</text></svg>',
