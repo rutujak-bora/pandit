@@ -41,6 +41,13 @@ const services = [
     slug: 'wedding-puja'
   },
   {
+    title: '⭐ Rudrabhishek Puja - Shravan Mas Special',
+    description: 'Sacred Rudrabhishek during the auspicious Shravan month for Lord Shiva blessings',
+    image: '/services/wedding-puja.jpeg',
+    icon: '🔱',
+    slug: 'rudrabhishek-puja'
+  },
+  {
     title: 'Griha Pravesh',
     description: 'Housewarming ceremonies for new home blessings',
     image: '/services/griha-pravesh.jpeg',
