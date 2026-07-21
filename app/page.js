@@ -1,13 +1,36 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube } from 'lucide-react'
+import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X } from 'lucide-react'
 import Link from 'next/link'
+
+// Live Social Proof Notifications Data
+const socialProofNotifications = [
+  { name: 'Rahul Sharma', location: 'Gurgaon', service: 'Wedding Puja', time: '2 mins ago', emoji: '💑' },
+  { name: 'Priya Singh', location: 'Noida', service: 'Griha Pravesh', time: '5 mins ago', emoji: '🏠' },
+  { name: 'Amit Gupta', location: 'Delhi', service: 'Satyanarayan Katha', time: '8 mins ago', emoji: '🕉️' },
+  { name: 'Sunita Verma', location: 'Faridabad', service: 'Navratri Puja', time: '12 mins ago', emoji: '🪔' },
+  { name: 'Ravi Tiwari', location: 'Ghaziabad', service: 'Vastu Shanti', time: '15 mins ago', emoji: '🧭' },
+  { name: 'Meena Joshi', location: 'Dwarka', service: 'Naamkaran Sanskar', time: '18 mins ago', emoji: '👶' },
+  { name: 'Sandeep Kumar', location: 'Rohini', service: 'Ganesh Puja', time: '22 mins ago', emoji: '🙏' },
+  { name: 'Kavita Mishra', location: 'Vasant Kunj', service: 'Wedding Puja', time: '25 mins ago', emoji: '💑' },
+  { name: 'Vijay Pandey', location: 'Indirapuram', service: 'Griha Pravesh', time: '30 mins ago', emoji: '🏠' },
+  { name: 'Anita Yadav', location: 'Gurugram', service: 'New Office Puja', time: '35 mins ago', emoji: '🏢' },
+]
+
+// All Service Areas for Local SEO
+const serviceAreas = [
+  { name: 'Delhi', areas: ['Connaught Place', 'Dwarka', 'Rohini', 'Janakpuri', 'Vasant Kunj', 'Saket', 'Lajpat Nagar', 'Karol Bagh', 'Mayur Vihar', 'Preet Vihar'] },
+  { name: 'Gurgaon', areas: ['DLF Phase 1-5', 'Sohna Road', 'Golf Course Road', 'Sector 14', 'Sector 56', 'MG Road', 'Palam Vihar', 'Udyog Vihar', 'Cyber City', 'New Colony'] },
+  { name: 'Noida', areas: ['Sector 18', 'Sector 62', 'Sector 50', 'Sector 137', 'Sector 150', 'Greater Noida', 'Expressway', 'Indirapuram', 'Vasundhara', 'Vaishali'] },
+  { name: 'Faridabad', areas: ['Sector 15', 'NIT Faridabad', 'Old Faridabad', 'Ballabhgarh', 'Sector 21C', 'Green Field Colony', 'Neharpar', 'NHPC Colony'] },
+  { name: 'Ghaziabad', areas: ['Raj Nagar', 'Kaushambi', 'Indirapuram', 'Vaishali', 'Siddharth Vihar', 'Crossing Republik', 'Mohan Nagar', 'Lal Kuan'] },
+]
 
 const services = [
   {
@@ -274,6 +297,10 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const [showReviewForm, setShowReviewForm] = useState(false)
+  const [notification, setNotification] = useState(null)
+  const [showNotification, setShowNotification] = useState(false)
+  const notifIndexRef = useRef(0)
+  const notifDismissedRef = useRef(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -287,6 +314,29 @@ export default function Home() {
   useEffect(() => {
     fetchReviews()
   }, [])
+
+  // Social proof notification cycle
+  useEffect(() => {
+    const showNext = () => {
+      if (notifDismissedRef.current) return
+      const idx = notifIndexRef.current % socialProofNotifications.length
+      setNotification(socialProofNotifications[idx])
+      setShowNotification(true)
+      notifIndexRef.current += 1
+      // Auto-hide after 5 seconds
+      setTimeout(() => setShowNotification(false), 5000)
+    }
+    // First notification after 8 seconds
+    const firstTimer = setTimeout(showNext, 8000)
+    // Then every 12 seconds
+    const interval = setInterval(showNext, 12000)
+    return () => { clearTimeout(firstTimer); clearInterval(interval) }
+  }, [])
+
+  const dismissNotification = () => {
+    setShowNotification(false)
+    notifDismissedRef.current = true
+  }
 
   const fetchReviews = async () => {
     try {
@@ -637,6 +687,60 @@ Booking ID: ${data.bookingId || 'N/A'}`
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">4.9★</div>
               <div className="text-gray-600">Average Rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section - Local SEO */}
+      <section className="py-16 bg-white border-b border-orange-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
+              <MapPin className="w-4 h-4" /> Serving All of Delhi NCR
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Pandit Ji <span className="text-orange-600">Near You</span>
+            </h2>
+            <p className="text-gray-500 mt-3 max-w-xl mx-auto">
+              We travel to your doorstep across Delhi, Gurgaon, Noida, Faridabad &amp; Ghaziabad. Same-day bookings available!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {serviceAreas.map((city) => (
+              <div key={city.name} className="bg-orange-50 border border-orange-100 rounded-2xl p-5 hover:shadow-lg hover:border-orange-300 transition-all group">
+                <h3 className="font-bold text-orange-700 text-lg mb-3 flex items-center gap-2">
+                  <span className="w-7 h-7 bg-orange-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    {city.name[0]}
+                  </span>
+                  {city.name}
+                </h3>
+                <ul className="space-y-1">
+                  {city.areas.map((area) => (
+                    <li key={area} className="text-sm text-gray-600 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3 h-3 text-orange-400 flex-shrink-0" />
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-gray-500 text-sm mb-4">📍 Not sure if we cover your area? Just call or WhatsApp us!</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="tel:+919580758639">
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-xl shadow-md">
+                  <Phone className="w-4 h-4 mr-2" /> Call to Check Availability
+                </Button>
+              </a>
+              <a href={`https://wa.me/919580758639?text=${encodeURIComponent('Namaste! I want to check if you serve my area for puja booking.')}`} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-green-500 text-green-700 hover:bg-green-50 px-8 py-3 rounded-xl">
+                  <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp Us
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -1249,6 +1353,34 @@ Booking ID: ${data.bookingId || 'N/A'}`
           </div>
         </div>
       </footer>
+
+      {/* Live Social Proof Notification */}
+      <div
+        className={`fixed bottom-24 left-4 z-50 transition-all duration-500 ${
+          showNotification ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+      >
+        {notification && (
+          <div className="bg-white border border-orange-100 rounded-2xl shadow-2xl p-4 flex items-start gap-3 max-w-[280px]" role="alert">
+            <div className="text-2xl flex-shrink-0 mt-0.5">{notification.emoji}</div>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs text-gray-400 font-medium mb-0.5">{notification.time}</p>
+              <p className="text-sm font-bold text-gray-900 truncate">{notification.name}</p>
+              <p className="text-xs text-gray-600">
+                from <span className="font-semibold text-orange-600">{notification.location}</span> just booked
+              </p>
+              <p className="text-xs font-semibold text-orange-700 mt-1">{notification.service}</p>
+            </div>
+            <button
+              onClick={dismissNotification}
+              className="text-gray-300 hover:text-gray-500 flex-shrink-0 -mt-1 -mr-1"
+              aria-label="Dismiss"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Floating WhatsApp Button */}
       <a
