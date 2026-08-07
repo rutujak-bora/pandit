@@ -11,20 +11,21 @@ import Link from 'next/link'
 
 // Live Social Proof Notifications Data
 const socialProofNotifications = [
-  { name: 'Rahul Sharma', location: 'Gurgaon', service: 'Wedding Puja', time: '2 mins ago', emoji: '💑' },
+  { name: 'Rahul Sharma', location: 'Gomti Nagar, Lucknow', service: 'Wedding Puja', time: '2 mins ago', emoji: '💑' },
   { name: 'Priya Singh', location: 'Noida', service: 'Griha Pravesh', time: '5 mins ago', emoji: '🏠' },
-  { name: 'Amit Gupta', location: 'Delhi', service: 'Satyanarayan Katha', time: '8 mins ago', emoji: '🕉️' },
+  { name: 'Amit Gupta', location: 'Aliganj, Lucknow', service: 'Satyanarayan Katha', time: '8 mins ago', emoji: '🕉️' },
   { name: 'Sunita Verma', location: 'Faridabad', service: 'Navratri Puja', time: '12 mins ago', emoji: '🪔' },
-  { name: 'Ravi Tiwari', location: 'Ghaziabad', service: 'Vastu Shanti', time: '15 mins ago', emoji: '🧭' },
+  { name: 'Ravi Tiwari', location: 'Indira Nagar, Lucknow', service: 'Vastu Shanti', time: '15 mins ago', emoji: '🧭' },
   { name: 'Meena Joshi', location: 'Dwarka', service: 'Naamkaran Sanskar', time: '18 mins ago', emoji: '👶' },
-  { name: 'Sandeep Kumar', location: 'Rohini', service: 'Ganesh Puja', time: '22 mins ago', emoji: '🙏' },
+  { name: 'Sandeep Kumar', location: 'Hazratganj, Lucknow', service: 'Ganesh Puja', time: '22 mins ago', emoji: '🙏' },
   { name: 'Kavita Mishra', location: 'Vasant Kunj', service: 'Wedding Puja', time: '25 mins ago', emoji: '💑' },
-  { name: 'Vijay Pandey', location: 'Indirapuram', service: 'Griha Pravesh', time: '30 mins ago', emoji: '🏠' },
+  { name: 'Vijay Pandey', location: 'Mahanagar, Lucknow', service: 'Griha Pravesh', time: '30 mins ago', emoji: '🏠' },
   { name: 'Anita Yadav', location: 'Gurugram', service: 'New Office Puja', time: '35 mins ago', emoji: '🏢' },
 ]
 
 // All Service Areas for Local SEO
 const serviceAreas = [
+  { name: 'Lucknow', areas: ['Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar', 'Hazratganj', 'Ashiyana', 'Vikas Nagar', 'Jankipuram'] },
   { name: 'Delhi', areas: ['Connaught Place', 'Dwarka', 'Rohini', 'Janakpuri', 'Vasant Kunj', 'Saket', 'Lajpat Nagar', 'Karol Bagh', 'Mayur Vihar', 'Preet Vihar'] },
   { name: 'Gurgaon', areas: ['DLF Phase 1-5', 'Sohna Road', 'Golf Course Road', 'Sector 14', 'Sector 56', 'MG Road', 'Palam Vihar', 'Udyog Vihar', 'Cyber City', 'New Colony'] },
   { name: 'Noida', areas: ['Sector 18', 'Sector 62', 'Sector 50', 'Sector 137', 'Sector 150', 'Greater Noida', 'Expressway', 'Indirapuram', 'Vasundhara', 'Vaishali'] },
@@ -704,13 +705,13 @@ Booking ID: ${data.bookingId || 'N/A'}`
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-4">
-              <MapPin className="w-4 h-4" /> Serving All of Delhi NCR
+              <MapPin className="w-4 h-4" /> Serving Lucknow & Delhi NCR
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Pandit Ji <span className="text-orange-600">Near You</span>
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              We travel to your doorstep across Delhi, Gurgaon, Noida, Faridabad &amp; Ghaziabad. Same-day bookings available!
+              We travel to your doorstep across Lucknow, Delhi, Gurgaon, Noida, Faridabad &amp; Ghaziabad. Same-day bookings available!
             </p>
           </div>
 
@@ -1332,9 +1333,14 @@ Booking ID: ${data.bookingId || 'N/A'}`
                   <Mail className="w-4 h-4" />
                   <a href="mailto:contact@panditjiservices.com" className="hover:text-white">contact@panditjiservices.com</a>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Delhi NCR</span>
+                <li className="flex items-start space-x-2">
+                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                  <span className="leading-tight">
+                    b3/198 Vishwash Khand,<br/>
+                    Gomti Nagar, Lucknow<br/>
+                    Uttar Pradesh 226010<br/>
+                    <span className="text-xs text-gray-500 mt-1 block">(Also serving Delhi NCR)</span>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -1342,21 +1348,23 @@ Booking ID: ${data.bookingId || 'N/A'}`
 
           <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="max-w-4xl mx-auto">
-              <h4 className="text-gray-400 text-sm font-semibold mb-3">Popular Searches & Keywords in Delhi NCR</h4>
+              <h4 className="text-gray-400 text-sm font-semibold mb-3">Popular Searches & Keywords</h4>
               <p className="text-gray-500 text-xs leading-relaxed flex flex-wrap gap-2">
-                <span>Top Pandit Ji for Puja & Wedding in Delhi – Sandesh Tiwari</span>
+                <span>Top Pandit Ji for Puja & Wedding in Lucknow – Sandesh Tiwari</span>
+                <span className="text-gray-600">|</span>
+                <span>Pandit ji near me</span>
                 <span className="text-gray-600">|</span>
                 <span>Book Pandit for Ganpati puja, griha pravesh puja</span>
                 <span className="text-gray-600">|</span>
                 <span>Pandit for annaprashan puja, naming ceremony- Book now</span>
                 <span className="text-gray-600">|</span>
-                <span>Contact us - Pandit Ji Delhi</span>
+                <span>Contact us - Pandit Ji Lucknow & Delhi NCR</span>
               </p>
             </div>
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Pandit Ji Services. All rights reserved. | Serving Delhi NCR with devotion</p>
+            <p>&copy; {new Date().getFullYear()} Pandit Ji Services. All rights reserved. | Serving Lucknow & Delhi NCR with devotion</p>
           </div>
         </div>
       </footer>

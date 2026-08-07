@@ -2,6 +2,21 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 const locationData = {
+  'pandit-in-lucknow': {
+    city: 'Lucknow',
+    state: 'Uttar Pradesh',
+    phone: '+919580758639',
+    heroTitle: 'Best Pandit Ji in Lucknow',
+    heroSubtitle: 'Trusted Vedic Priest for All Pujas & Ceremonies in Lucknow',
+    description: 'Looking for a reliable and experienced pandit ji near me in Lucknow? Pandit Sandesh Tiwari is a highly learned Saryuparin Brahman associated with the oldest math in Ayodhya. Based in Gomti Nagar, we perform all types of pujas, havan, and Vedic ceremonies at your doorstep in Lucknow.',
+    areas: ['Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar', 'Hazratganj', 'Ashiyana', 'Vikas Nagar', 'Jankipuram', 'Chowk', 'Aashiana', 'Aminabad'],
+    keywords: 'pandit ji near me, Pandit in Lucknow, Pandit Ji in Lucknow, Best Pandit Lucknow, Pandit for pooja name Lucknow, Vedic Pandit Lucknow, Pandit for Wedding Lucknow, Pandit in Gomti Nagar',
+    faqs: [
+      { q: 'Do you provide pandit services in all Lucknow areas?', a: 'Yes, we cover all areas of Lucknow including Gomti Nagar, Indira Nagar, Aliganj, Mahanagar, Hazratganj and more. We travel to your location.' },
+      { q: 'How quickly can a pandit come to my home in Lucknow?', a: 'We offer same-day bookings in Lucknow. Call us and we confirm within 1 hour.' },
+      { q: 'What pujas do you perform in Lucknow?', a: 'We perform all types of pujas - Wedding, Griha Pravesh, Rudrabhishek, Navratri, Ganesh Puja, Satyanarayan Katha, Naamkaran, Vastu Shanti, and more.' },
+    ]
+  },
   'pandit-in-noida': {
     city: 'Noida',
     state: 'Uttar Pradesh',
