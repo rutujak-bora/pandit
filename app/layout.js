@@ -18,7 +18,7 @@ export const metadata = {
     siteName: 'Pandit Ji Services',
     images: [
       {
-        url: 'https://www.poojapandits.com/new-bg.jpeg',
+        url: 'https://www.poojapandits.com/og-preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Pandit Sandesh Tiwari - Best Pandit Ji in Lucknow & Delhi NCR',
@@ -29,7 +29,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',
     description: 'Book the best Pandit Ji near me for Wedding, Griha Pravesh. Authentic Hindu ceremonies.',
-    images: ['https://www.poojapandits.com/new-bg.jpeg'],
+    images: ['https://www.poojapandits.com/og-preview.jpg'],
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
               '@type': 'LocalBusiness',
               name: 'Pandit Sandesh Tiwari - Best Pandit Ji near me',
               description: 'Professional Hindu priest services for all Vedic ceremonies and pujas in Lucknow and Delhi NCR.',
-              image: 'https://poojapandits.com/new-bg.jpeg',
+              image: 'https://poojapandits.com/og-preview.jpg',
               '@id': 'https://poojapandits.com',
               url: 'https://poojapandits.com',
               telephone: '+919580758639',
