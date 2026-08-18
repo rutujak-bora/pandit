@@ -82,14 +82,24 @@ export default function RootLayout({ children }) {
               url: 'https://poojapandits.com',
               telephone: '+919580758639',
               email: 'contact@panditjiservices.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'b3/198 Vishwash Khand, Gomti Nagar',
-                addressLocality: 'Lucknow',
-                postalCode: '226010',
-                addressRegion: 'Uttar Pradesh',
-                addressCountry: 'IN'
-              },
+              address: [
+                {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'b3/198 Vishwash Khand, Gomti Nagar',
+                  addressLocality: 'Lucknow',
+                  postalCode: '226010',
+                  addressRegion: 'Uttar Pradesh',
+                  addressCountry: 'IN'
+                },
+                {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Katwaria Sarai',
+                  addressLocality: 'New Delhi',
+                  postalCode: '110016',
+                  addressRegion: 'Delhi',
+                  addressCountry: 'IN'
+                }
+              ],
               geo: {
                 '@type': 'GeoCoordinates',
                 latitude: 26.8467,

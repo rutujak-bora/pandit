@@ -1258,13 +1258,37 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-orange-600" />
+                <div className="space-y-3 pt-2">
+                  <div className="flex items-start space-x-3 bg-orange-50/70 p-3.5 rounded-xl border border-orange-200">
+                    <div className="w-9 h-9 bg-orange-600 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 mb-0.5">
+                        <span>Lucknow Address</span>
+                        <span className="text-[10px] bg-orange-200 text-orange-800 font-semibold px-2 py-0.5 rounded-full">Primary</span>
+                      </h4>
+                      <p className="text-gray-700 text-xs leading-relaxed">
+                        b3/198 Vishwash Khand, Gomti Nagar,<br />
+                        Lucknow, Uttar Pradesh - 226010
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                    <p className="text-gray-600">Serving across Delhi NCR<br />Delhi, Gurgaon, Noida, Faridabad</p>
+
+                  <div className="flex items-start space-x-3 bg-red-50/70 p-3.5 rounded-xl border border-red-200">
+                    <div className="w-9 h-9 bg-red-600 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 mb-0.5">
+                        <span>Delhi NCR Address</span>
+                        <span className="text-[10px] bg-red-200 text-red-800 font-semibold px-2 py-0.5 rounded-full">Delhi NCR</span>
+                      </h4>
+                      <p className="text-gray-700 text-xs leading-relaxed">
+                        Katwaria Sarai, New Delhi - 110016<br />
+                        <span className="text-gray-500 text-[11px]">(Serving Delhi, Noida, Gurgaon, Faridabad & Ghaziabad)</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1390,24 +1414,33 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <ul className="space-y-3 text-gray-400">
+              <h4 className="text-lg font-semibold mb-4 text-orange-300">Contact & Locations</h4>
+              <ul className="space-y-3 text-gray-400 text-xs">
                 <li className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+919580758639" className="hover:text-orange-400">+91 95807 58639</a>
+                  <Phone className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                  <a href="tel:+919580758639" className="hover:text-orange-400 font-semibold text-white text-sm">+91 95807 58639</a>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 text-orange-400 flex-shrink-0" />
                   <a href="mailto:contact@panditjiservices.com" className="hover:text-white">contact@panditjiservices.com</a>
                 </li>
-                <li className="flex items-start space-x-2">
-                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span className="leading-tight">
-                    b3/198 Vishwash Khand,<br/>
-                    Gomti Nagar, Lucknow<br/>
-                    Uttar Pradesh 226010<br/>
-                    <span className="text-xs text-gray-500 mt-1 block">(Also serving Delhi NCR)</span>
-                  </span>
+                <li className="pt-2 border-t border-gray-800">
+                  <p className="text-orange-400 font-semibold text-xs mb-1 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5" /> Lucknow Office (Primary):
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    b3/198 Vishwash Khand, Gomti Nagar,<br />
+                    Lucknow, Uttar Pradesh - 226010
+                  </p>
+                </li>
+                <li className="pt-2 border-t border-gray-800">
+                  <p className="text-red-400 font-semibold text-xs mb-1 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5" /> Delhi NCR Base:
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Katwaria Sarai, New Delhi - 110016<br />
+                    <span className="text-gray-500">(Serving Delhi, Noida, Gurgaon, Faridabad & Ghaziabad)</span>
+                  </p>
                 </li>
               </ul>
             </div>
