@@ -538,7 +538,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-xl md:text-2xl font-bold text-orange-600">Pandit Ji Services</p>
-                <p className="text-xs text-gray-600">Delhi NCR</p>
+                <p className="text-xs text-gray-600">Lucknow &amp; Delhi NCR</p>
               </div>
             </div>
 
@@ -636,7 +636,7 @@ export default function Home() {
                   Top Pandit Ji
                 </span>
                 <span className="block text-orange-200 text-3xl md:text-4xl mt-2 font-light tracking-tight italic">
-                  Serving all Delhi NCR
+                  Serving Lucknow &amp; all Delhi NCR
                 </span>
               </h1>
 
@@ -841,7 +841,7 @@ export default function Home() {
                 About <span className="text-orange-600">Pandit Sandesh Tiwari</span>
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                Pandit Sandesh Tiwari ji is a highly learned <strong>Saryuparin Brahman</strong> associated with one of the oldest <strong>math in Ayodhya</strong>. Serving the Delhi NCR region, he brings over <strong>15 years of experience</strong> in leading sacred Vedic anushthanas and ceremonies with profound devotion and authenticity.
+                Pandit Sandesh Tiwari ji is a highly learned <strong>Saryuparin Brahman</strong> associated with one of the oldest <strong>math in Ayodhya</strong>. Serving Lucknow and the entire Delhi NCR region, he brings over <strong>15 years of experience</strong> in leading sacred Vedic anushthanas and ceremonies with profound devotion and authenticity.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Expert in leading diverse spiritual ceremonies including Navratri Devi Pujan, Maha Mritunjay Jaap, Surya Aradhna, Ganpati Puja, Traditional Marriages, Shri Mad Bhagwat Pooja, and Shri Ram Charit Manas Path.
