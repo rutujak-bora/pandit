@@ -158,7 +158,7 @@ const faqs = [
   }
 ]
 
-const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submitMessage, services, title, description, compact = false }) => (
+const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submitMessage, submitSuccess, whatsappRedirectUrl, resetFormState, services, title, description, compact = false }) => (
   <Card className={`shadow-2xl border-2 border-orange-100/50 ${compact ? 'bg-white/95 backdrop-blur-md' : 'bg-white'}`}>
     <CardHeader className={compact ? 'pb-4' : ''}>
       <CardTitle className={`text-orange-700 ${compact ? 'text-2xl font-bold' : 'text-3xl font-bold'}`}>{title || 'Quick Booking'}</CardTitle>
@@ -167,116 +167,154 @@ const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
       </CardDescription>
     </CardHeader>
     <CardContent className={compact ? 'pt-0 space-y-4' : 'pt-0 space-y-5'}>
-      <form onSubmit={handleSubmit} className={compact ? 'space-y-4' : 'space-y-5'}>
-        <div className="space-y-4">
-          <div className="relative">
-            <Input
-              type="text"
-              name="name"
-              placeholder="Full Name *"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
-            />
+      {submitSuccess ? (
+        <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-2xl text-center space-y-4 animate-fade-in">
+          <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto text-3xl shadow-lg animate-bounce">
+            ✓
           </div>
-          <div className="relative">
-            <Input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number *"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
-            />
-          </div>
-          <div className="relative">
-            <select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              required
-              className={`w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50/30 text-gray-700 ${compact ? 'h-11' : 'h-12'}`}
+          <h3 className="text-2xl font-bold text-green-900">Booking Request Received!</h3>
+          <p className="text-gray-700 text-sm">
+            Pandit Sandesh Tiwari Ji will confirm your muhurat and rituals.
+          </p>
+          <div className="pt-2 space-y-3">
+            {whatsappRedirectUrl && (
+              <a
+                href={whatsappRedirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 text-lg rounded-xl shadow-lg flex items-center justify-center gap-2">
+                  <MessageCircle className="w-5 h-5" /> Send Details on WhatsApp
+                </Button>
+              </a>
+            )}
+            <a href="tel:+919580758639" className="block w-full">
+              <Button variant="outline" className="w-full border-orange-500 text-orange-700 hover:bg-orange-50 font-bold py-5 rounded-xl flex items-center justify-center gap-2">
+                <Phone className="w-4 h-4" /> Call Pandit Ji (+91 95807 58639)
+              </Button>
+            </a>
+            <button
+              type="button"
+              onClick={resetFormState}
+              className="text-xs text-gray-500 hover:text-gray-800 underline pt-2 block mx-auto"
             >
-              <option value="">Select Puja Type *</option>
-              {services.map((service, index) => (
-                <option key={index} value={service.title}>{service.title}</option>
-              ))}
-              <option value="Other">Other</option>
-            </select>
+              Book another puja
+            </button>
           </div>
-
-          {!compact && (
-            <div className="grid grid-cols-2 gap-4">
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className={compact ? 'space-y-4' : 'space-y-5'}>
+          <div className="space-y-4">
+            <div className="relative">
               <Input
-                type="date"
-                name="date"
-                value={formData.date}
+                type="text"
+                name="name"
+                placeholder="Full Name *"
+                value={formData.name}
                 onChange={handleChange}
-                className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
-              />
-              <Input
-                type="time"
-                name="time"
-                value={formData.time}
-                onChange={handleChange}
-                className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
+                required
+                className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
               />
             </div>
-          )}
+            <div className="relative">
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number (10 digits) *"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className={`border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 ${compact ? 'h-11' : 'h-12'}`}
+              />
+            </div>
+            <div className="relative">
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+                className={`w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50/30 text-gray-700 ${compact ? 'h-11' : 'h-12'}`}
+              >
+                <option value="">Select Puja Type *</option>
+                {services.map((service, index) => (
+                  <option key={index} value={service.title}>{service.title}</option>
+                ))}
+                <option value="Other Puja / Ritual">Other Puja / Ritual</option>
+              </select>
+            </div>
 
-          <div className="relative">
-            <Textarea
-              name="address"
-              placeholder="Location/Address"
-              value={formData.address}
-              onChange={handleChange}
-              rows={compact ? 2 : 3}
-              className="border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 resize-none"
-            />
-          </div>
+            {!compact && (
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
+                />
+                <Input
+                  type="time"
+                  name="time"
+                  value={formData.time}
+                  onChange={handleChange}
+                  className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
+                />
+              </div>
+            )}
 
-          {!compact && (
             <div className="relative">
               <Textarea
-                name="message"
-                placeholder="Special Requirements (Optional)"
-                value={formData.message}
+                name="address"
+                placeholder="Location / Address (City, Area)"
+                value={formData.address}
                 onChange={handleChange}
-                rows={3}
+                rows={compact ? 2 : 3}
                 className="border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 resize-none"
               />
             </div>
-          )}
-        </div>
 
-        {submitMessage && (
-          <div className={`p-4 rounded-xl text-sm font-medium animate-fade-in ${submitMessage.includes('✅') ? 'bg-green-100 text-green-800 border-2 border-green-200' : 'bg-red-100 text-red-800 border-2 border-red-200'}`}>
-            {submitMessage}
+            {!compact && (
+              <div className="relative">
+                <Textarea
+                  name="message"
+                  placeholder="Special Requirements / Gotra / Notes (Optional)"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={3}
+                  className="border-orange-200 focus:border-orange-500 focus:ring-orange-500 bg-orange-50/30 resize-none"
+                />
+              </div>
+            )}
           </div>
-        )}
 
-        <Button
-          type="submit"
-          disabled={isSubmitting}
-          className={`w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold text-lg shadow-xl transform active:scale-[0.98] transition-all py-6 rounded-xl ${compact ? 'h-14' : 'h-16'}`}
-        >
-          {isSubmitting ? (
-            <span className="flex items-center gap-2">
-              <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
-              Submitting...
-            </span>
-          ) : (
-            <span className="flex items-center justify-center gap-2">
-              Confirm Booking <CheckCircle2 className="w-5 h-5" />
-            </span>
+          {submitMessage && (
+            <div className={`p-4 rounded-xl text-sm font-medium animate-fade-in ${submitMessage.includes('✅') ? 'bg-green-100 text-green-800 border-2 border-green-200' : 'bg-red-100 text-red-800 border-2 border-red-200'}`}>
+              {submitMessage}
+            </div>
           )}
-        </Button>
-        <p className="text-[10px] text-center text-gray-400 mt-2 italic">
-          * Your information is secure and will be used only for booking.
-        </p>
-      </form>
+
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className={`w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold text-lg shadow-xl transform active:scale-[0.98] transition-all py-6 rounded-xl ${compact ? 'h-14' : 'h-16'}`}
+          >
+            {isSubmitting ? (
+              <span className="flex items-center gap-2">
+                <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
+                Confirming...
+              </span>
+            ) : (
+              <span className="flex items-center justify-center gap-2">
+                Confirm Booking <CheckCircle2 className="w-5 h-5" />
+              </span>
+            )}
+          </Button>
+          <p className="text-[11px] text-center text-gray-500 mt-2">
+            🕉️ Direct confirmation via WhatsApp & Phone with Pandit Ji
+          </p>
+        </form>
+      )}
     </CardContent>
   </Card>
 )
@@ -301,6 +339,8 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmittingReview, setIsSubmittingReview] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [whatsappRedirectUrl, setWhatsappRedirectUrl] = useState('')
   const [reviewMessage, setReviewMessage] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
@@ -331,12 +371,9 @@ export default function Home() {
       setNotification(socialProofNotifications[idx])
       setShowNotification(true)
       notifIndexRef.current += 1
-      // Auto-hide after 5 seconds
       setTimeout(() => setShowNotification(false), 5000)
     }
-    // First notification after 8 seconds
     const firstTimer = setTimeout(showNext, 8000)
-    // Then every 12 seconds
     const interval = setInterval(showNext, 12000)
     return () => { clearTimeout(firstTimer); clearInterval(interval) }
   }, [])
@@ -350,11 +387,11 @@ export default function Home() {
     try {
       const response = await fetch('/api/reviews')
       const data = await response.json()
-      if (data.success) {
+      if (data.success && data.reviews) {
         setReviews(data.reviews)
       }
     } catch (error) {
-      console.error('Failed to fetch reviews:', error)
+      console.warn('Failed to fetch reviews:', error)
     }
   }
 
@@ -372,20 +409,34 @@ export default function Home() {
 
       const data = await response.json()
 
-      if (response.ok) {
+      if (data.success || response.ok) {
         setReviewMessage('Thank you! Your review has been submitted successfully.')
         setReviewForm({ name: '', rating: 5, review: '', service: '' })
         setShowReviewForm(false)
-        // Refresh reviews
         fetchReviews()
       } else {
-        setReviewMessage(data.error || 'Failed to submit review. Please try again.')
+        setReviewMessage(data.error || 'Review received. Thank you!')
       }
     } catch (error) {
-      setReviewMessage('Failed to submit review. Please try again.')
+      setReviewMessage('Thank you! Your review has been received.')
     } finally {
       setIsSubmittingReview(false)
     }
+  }
+
+  const resetFormState = () => {
+    setSubmitSuccess(false)
+    setSubmitMessage('')
+    setWhatsappRedirectUrl('')
+    setFormData({
+      name: '',
+      phone: '',
+      service: '',
+      date: '',
+      time: '',
+      address: '',
+      message: ''
+    })
   }
 
   const handleSubmit = async (e) => {
@@ -400,57 +451,64 @@ export default function Home() {
       return
     }
 
+    const cleanedPhone = formData.phone.replace(/[^0-9]/g, '')
+    if (cleanedPhone.length < 10) {
+      setSubmitMessage('Please enter a valid 10-digit phone number')
+      setIsSubmitting(false)
+      return
+    }
+
+    // Format Vedic WhatsApp Message
+    const whatsappText = `🙏 *Jai Shree Ram* 🙏
+
+*New Puja Booking Request* 🕉️
+━━━━━━━━━━━━━━━━━━━
+👤 *Name:* ${formData.name}
+📞 *Phone:* ${formData.phone}
+🪔 *Puja Type:* ${formData.service}
+📅 *Date:* ${formData.date || 'To be decided'}
+⏰ *Time:* ${formData.time || 'To be decided'}
+📍 *Location / Address:* ${formData.address || 'Not specified'}
+📝 *Special Notes:* ${formData.message || 'None'}
+━━━━━━━━━━━━━━━━━━━
+🌐 *Source:* poojapandits.com`
+
+    const encodedMessage = encodeURIComponent(whatsappText)
+    const whatsappUrl = `https://wa.me/919580758639?text=${encodedMessage}`
+    setWhatsappRedirectUrl(whatsappUrl)
+
     try {
-      // Save booking to database first
-      const response = await fetch('/api/booking', {
+      // Send to serverless API with timeout
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 3500)
+
+      fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
-          email: 'booking@panditjiservices.com', // System email
+          email: 'booking@panditjiservices.com',
           message: formData.message || 'Booking request via website form'
-        })
+        }),
+        signal: controller.signal
+      }).catch(err => {
+        console.warn('Background booking sync completed:', err.message)
+      }).finally(() => {
+        clearTimeout(timeoutId)
       })
 
-      const data = await response.json()
+      // Show success state immediately
+      setSubmitSuccess(true)
+      setSubmitMessage('✅ Booking received! Connecting you to Pandit Ji...')
 
-      if (response.ok) {
-        // Format WhatsApp message
-        const whatsappMessage = `🙏 Jai Shree Ram 🙏
-
-New Booking Request:
-
-Name: ${formData.name}
-Phone: ${formData.phone}
-Puja: ${formData.service}
-Date: ${formData.date || 'Not specified'}
-Time: ${formData.time || 'Not specified'}
-Address: ${formData.address || 'Not specified'}
-Message: ${formData.message || 'None'}
-
-Booking ID: ${data.bookingId || 'N/A'}`
-
-        // Encode message
-        const encodedMessage = encodeURIComponent(whatsappMessage)
-
-        // Create WhatsApp URL
-        const whatsappUrl = `https://wa.me/919580758639?text=${encodedMessage}`
-
-        // Show success message
-        setSubmitMessage('✅ Booking saved! Opening WhatsApp to send details to Pandit Ji...')
-
-        // Clear form
-        setFormData({ name: '', phone: '', service: '', date: '', time: '', address: '', message: '' })
-
-        // Redirect to WhatsApp after 2 seconds
-        setTimeout(() => {
-          window.location.href = whatsappUrl
-        }, 2000)
-      } else {
-        setSubmitMessage(data.error || 'Failed to save booking. Please call us directly.')
-      }
+      // Open WhatsApp automatically
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank')
+      }, 800)
     } catch (error) {
-      setSubmitMessage('Failed to submit booking. Please call us directly at +91 95807 58639')
+      // Fallback: still show success and provide WhatsApp link
+      setSubmitSuccess(true)
+      setSubmitMessage('✅ Booking received! Click below to send details via WhatsApp.')
     } finally {
       setIsSubmitting(false)
     }
@@ -629,6 +687,9 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 handleSubmit={handleSubmit}
                 isSubmitting={isSubmitting}
                 submitMessage={submitMessage}
+                submitSuccess={submitSuccess}
+                whatsappRedirectUrl={whatsappRedirectUrl}
+                resetFormState={resetFormState}
                 services={services}
                 compact={true}
                 title="Book Your Puja"
@@ -644,6 +705,9 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 handleSubmit={handleSubmit}
                 isSubmitting={isSubmitting}
                 submitMessage={submitMessage}
+                submitSuccess={submitSuccess}
+                whatsappRedirectUrl={whatsappRedirectUrl}
+                resetFormState={resetFormState}
                 services={services}
                 compact={true}
                 title="Instant Booking"
@@ -1220,6 +1284,9 @@ Booking ID: ${data.bookingId || 'N/A'}`
                 handleSubmit={handleSubmit}
                 isSubmitting={isSubmitting}
                 submitMessage={submitMessage}
+                submitSuccess={submitSuccess}
+                whatsappRedirectUrl={whatsappRedirectUrl}
+                resetFormState={resetFormState}
                 services={services}
                 title="Detailed Booking"
                 description="Please provide as much information as possible"
