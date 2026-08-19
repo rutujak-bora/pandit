@@ -38,7 +38,7 @@ export default function ServiceDetailClient({ service }) {
                             </div>
                             <div>
                                 <p className="text-xl md:text-2xl font-bold text-orange-600">Pandit Ji Services</p>
-                                <p className="text-xs text-gray-600">Delhi NCR</p>
+                                <p className="text-xs text-gray-600">Lucknow &amp; Delhi NCR</p>
                             </div>
                         </Link>
 
