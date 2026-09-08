@@ -1301,8 +1301,24 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 mb-0.5">
-                        <span>Lucknow Address</span>
-                        <span className="text-[10px] bg-orange-200 text-orange-800 font-semibold px-2 py-0.5 rounded-full">Primary</span>
+                        <span>Lucknow Address (Main)</span>
+                        <span className="text-[10px] bg-orange-200 text-orange-800 font-semibold px-2 py-0.5 rounded-full">Gomti Nagar</span>
+                      </h4>
+                      <p className="text-gray-700 text-xs leading-relaxed">
+                        Vishvas Khand 4, Near Dukh Harni Shailani Mata Mandir, Jugauli Crossing, Gomti Nagar,<br />
+                        Lucknow, Uttar Pradesh - 226010
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3 bg-amber-50/70 p-3.5 rounded-xl border border-amber-200">
+                    <div className="w-9 h-9 bg-amber-600 text-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-sm flex items-center gap-1.5 mb-0.5">
+                        <span>Lucknow Address (Branch)</span>
+                        <span className="text-[10px] bg-amber-200 text-amber-800 font-semibold px-2 py-0.5 rounded-full">Vishwash Khand</span>
                       </h4>
                       <p className="text-gray-700 text-xs leading-relaxed">
                         b3/198 Vishwash Khand, Gomti Nagar,<br />
@@ -1462,11 +1478,16 @@ export default function Home() {
                 </li>
                 <li className="pt-2 border-t border-gray-800">
                   <p className="text-orange-400 font-semibold text-xs mb-1 flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5" /> Lucknow Office (Primary):
+                    <MapPin className="w-3.5 h-3.5" /> Lucknow Main Address:
+                  </p>
+                  <p className="text-gray-300 leading-relaxed mb-2">
+                    Vishvas Khand 4, Near Dukh Harni Shailani Mata Mandir, Jugauli Crossing, Gomti Nagar, Lucknow - 226010
+                  </p>
+                  <p className="text-amber-400 font-semibold text-xs mb-1 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5" /> Lucknow Branch:
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    b3/198 Vishwash Khand, Gomti Nagar,<br />
-                    Lucknow, Uttar Pradesh - 226010
+                    b3/198 Vishwash Khand, Gomti Nagar, Lucknow - 226010
                   </p>
                 </li>
                 <li className="pt-2 border-t border-gray-800">

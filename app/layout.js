@@ -85,6 +85,14 @@ export default function RootLayout({ children }) {
               address: [
                 {
                   '@type': 'PostalAddress',
+                  streetAddress: 'Vishvas Khand 4, Near Dukh Harni Shailani Mata Mandir, Jugauli Crossing, Gomti Nagar',
+                  addressLocality: 'Lucknow',
+                  postalCode: '226010',
+                  addressRegion: 'Uttar Pradesh',
+                  addressCountry: 'IN'
+                },
+                {
+                  '@type': 'PostalAddress',
                   streetAddress: 'b3/198 Vishwash Khand, Gomti Nagar',
                   addressLocality: 'Lucknow',
                   postalCode: '226010',
