@@ -727,13 +727,13 @@ export default function Home() {
                 whatsappRedirectUrl={whatsappRedirectUrl}
                 resetFormState={resetFormState}
                 services={services}
-                compact={true}
+                compact={false}
                 title="Book Your Puja"
                 description="Instant confirmation & free consultation"
               />
             </div>
 
-            {/* Mobile View Social Proof Badge */}
+            {/* Mobile View Booking Form */}
             <div className="lg:hidden animate-fade-in-up mt-8">
               <BookingForm
                 formData={formData}
@@ -745,7 +745,7 @@ export default function Home() {
                 whatsappRedirectUrl={whatsappRedirectUrl}
                 resetFormState={resetFormState}
                 services={services}
-                compact={true}
+                compact={false}
                 title="Instant Booking"
               />
             </div>
@@ -1254,12 +1254,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Book Your <span className="text-orange-600">Puja</span>
+              Contact <span className="text-orange-600">Us</span>
             </h2>
-            <p className="text-xl text-gray-600">Fill the form below and we'll contact you shortly</p>
+            <p className="text-xl text-gray-600">Reach out via phone, WhatsApp, or email — we're available every day</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
 
@@ -1351,22 +1351,6 @@ export default function Home() {
                 <p className="text-gray-900 font-semibold">Every Day: 6:00 AM - 9:00 PM</p>
                 <p className="text-sm text-gray-600 mt-2">Muhurat consultation available anytime</p>
               </div>
-            </div>
-
-            <div>
-              <BookingForm
-                formData={formData}
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-                isSubmitting={isSubmitting}
-                submitMessage={submitMessage}
-                submitSuccess={submitSuccess}
-                whatsappRedirectUrl={whatsappRedirectUrl}
-                resetFormState={resetFormState}
-                services={services}
-                title="Detailed Booking"
-                description="Please provide as much information as possible"
-              />
             </div>
           </div>
         </div>
