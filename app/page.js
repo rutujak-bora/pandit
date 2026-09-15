@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X } from 'lucide-react'
+import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages } from 'lucide-react'
 import Link from 'next/link'
 
 // Live Social Proof Notifications Data
@@ -155,6 +155,93 @@ const faqs = [
   {
     question: 'What are the payment methods?',
     answer: 'We accept cash, UPI, bank transfer, and online payment methods. Payment details will be shared after booking confirmation.'
+  }
+]
+
+const sanatanAnushthans = [
+  {
+    num: '1',
+    hi: 'सोलह (षोडश) संस्कार',
+    en: 'Sixteen (Shodasha) Sanskars',
+    descHi: 'गर्भाधान से अन्त्येष्टि तक समस्त शास्त्रोक्त वैदिक संस्कार',
+    descEn: 'Sacred Vedic life-stage rituals from birth to initiation'
+  },
+  {
+    num: '2',
+    hi: 'नव चण्डी (शतचण्डी) यज्ञ',
+    en: 'Nava Chandi (Shata Chandi) Yagya',
+    descHi: 'मां भगवती की कृपा, रक्षा व सुख-समृद्धि हेतु महायज्ञ',
+    descEn: 'Grand sacred yagya for Divine Mother’s supreme blessings and protection'
+  },
+  {
+    num: '3',
+    hi: 'नए प्रतिष्ठान का उद्घाटन पूजा',
+    en: 'New Business & Office Opening Puja',
+    descHi: 'दुकान, फैक्ट्री, शोरूम, कॉर्पोरेट ऑफिस व्यापार वृद्धि पूजन',
+    descEn: 'Auspicious Lakshmi-Ganesh & Vastu puja for business success and growth'
+  },
+  {
+    num: '4',
+    hi: 'ग्रहशान्ति पूजन',
+    en: 'Graha Shanti Pujan',
+    descHi: 'नवग्रहों की अनुकूलता व जीवन के कष्ट निवारण हेतु अनुष्ठान',
+    descEn: 'Navagraha propitiation puja to eliminate planetary afflictions and doshas'
+  },
+  {
+    num: '5',
+    hi: 'वास्तु शांति पूजन',
+    en: 'Vastu Shanti Pujan',
+    descHi: 'भवन, भूमि व निवास स्थान के वास्तु दोष निवारण पूजन',
+    descEn: 'Rituals to harmonize cosmic energy and remove residential/commercial Vastu defects'
+  },
+  {
+    num: '6',
+    hi: 'गृहप्रवेश',
+    en: 'Griha Pravesh (Housewarming)',
+    descHi: 'नवीन गृह में सकारात्मक ऊर्जा, सुख व शांति हेतु प्रवेश पूजन',
+    descEn: 'Vedic housewarming rituals for peace, prosperity, and spiritual positivity'
+  },
+  {
+    num: '7',
+    hi: 'रुद्राभिषेक',
+    en: 'Rudrabhishek Puja',
+    descHi: 'देवाधिदेव महादेव का मंत्रोच्चार सहित दिव्य अभिषेक व अर्चन',
+    descEn: 'Sacred Shiva abhishekam with Shukla Yajurveda Rudrashtadhyayi mantras'
+  },
+  {
+    num: '8',
+    hi: 'विष्णु जी का तुलसी पुष्पादी अर्चन',
+    en: 'Lord Vishnu Tulsi & Pushparchana',
+    descHi: 'भगवान श्री हरि विष्णु जी का तुलसी दल व पुष्पों से दिव्य अर्चन',
+    descEn: 'Devotional worship of Lord Vishnu with sacred Tulsi leaves and fragrant flowers'
+  },
+  {
+    num: '9',
+    hi: 'विष्णु सहस्त्र नाम आदि विविध स्त्रोत्र पाठ',
+    en: 'Vishnu Sahasranama & Stotra Recitation',
+    descHi: 'कल्याणकारी स्तोत्र पाठ, श्री सूक्त, कनकधारा, पुरुष सूक्त आदि',
+    descEn: 'Auspicious chanting of Vishnu Sahasranama, Purusha Suktam, Shri Suktam'
+  },
+  {
+    num: '10',
+    hi: 'सत्यनारायण भगवान की कथा एवम हवन',
+    en: 'Shri Satyanarayan Katha & Havan',
+    descHi: 'पारिवारिक सुख, शांति व मनोकामना पूर्ति हेतु पावन कथा व आहुति',
+    descEn: 'Sacred divine story narration with Panchamrit prasad and Vedic havan'
+  },
+  {
+    num: '11',
+    hi: 'संगीतमय सुन्दरकाण्ड पाठ',
+    en: 'Musical Sunderkand Path',
+    descHi: 'श्री रामदूत हनुमान जी की कृपा प्राप्ति हेतु भावपूर्ण संगीतमय पाठ',
+    descEn: 'Soulful musical recitation of Sunderkand for courage, obstacle removal and bliss'
+  },
+  {
+    num: '12',
+    hi: 'भजन सन्ध्या',
+    en: 'Bhajan Sandhya',
+    descHi: 'भक्तिमय संकीर्तन, देवी जागरण एवं आध्यात्मिक सत्संग कार्यक्रम',
+    descEn: 'Devotional kirtan, spiritual satsang, and divine evening singing sessions'
   }
 ]
 
@@ -372,6 +459,7 @@ export default function Home() {
   const [showReviewForm, setShowReviewForm] = useState(false)
   const [notification, setNotification] = useState(null)
   const [showNotification, setShowNotification] = useState(false)
+  const [sanatanMessageLang, setSanatanMessageLang] = useState('hi')
   const notifIndexRef = useRef(0)
   const notifDismissedRef = useRef(false)
 
@@ -919,6 +1007,177 @@ export default function Home() {
                   Book Consultation
                 </Button>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sanatan Karmakanda & Vedic Anushthan Section (Between About & Services) */}
+      <section id="sanatan-satsang" className="py-20 bg-gradient-to-b from-amber-50/70 via-orange-50/40 to-white border-y border-orange-200/80">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-orange-200 p-6 md:p-10 relative overflow-hidden">
+            {/* Background Om watermark */}
+            <div className="absolute -right-8 -bottom-8 text-[160px] md:text-[200px] select-none pointer-events-none opacity-10 leading-none">
+              🕉️
+            </div>
+
+            {/* Language Switcher Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-orange-100">
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-orange-600 animate-pulse"></span>
+                <span className="text-xs md:text-sm font-bold tracking-wider text-orange-900 uppercase">
+                  {sanatanMessageLang === 'hi' ? 'सनातन धर्म एवं कर्मकाण्ड संदेश' : 'Sanatan Vedic Message & Mission'}
+                </span>
+              </div>
+
+              {/* Language Toggle */}
+              <div className="inline-flex items-center bg-orange-50 p-1.5 rounded-2xl border border-orange-200 shadow-sm">
+                <Languages className="w-4 h-4 text-orange-600 ml-2 mr-1 flex-shrink-0" />
+                <span className="text-xs text-gray-600 font-medium mr-2 hidden sm:inline">
+                  {sanatanMessageLang === 'hi' ? 'अनुवाद / Translate:' : 'Language:'}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setSanatanMessageLang('hi')}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-bold transition-all ${
+                    sanatanMessageLang === 'hi'
+                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-md'
+                      : 'text-gray-700 hover:text-orange-700 hover:bg-orange-100/60'
+                  }`}
+                >
+                  🇮🇳 हिन्दी (Original)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSanatanMessageLang('en')}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-bold transition-all ${
+                    sanatanMessageLang === 'en'
+                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-md'
+                      : 'text-gray-700 hover:text-orange-700 hover:bg-orange-100/60'
+                  }`}
+                >
+                  🌐 English (Translate)
+                </button>
+              </div>
+            </div>
+
+            {/* Main Greeting Banner */}
+            <div className="mt-8 bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 text-white p-5 md:p-6 rounded-2xl shadow-lg text-center">
+              <p className="text-lg md:text-2xl font-bold tracking-wide">
+                {sanatanMessageLang === 'hi'
+                  ? 'आप सभी सनातनी भगवतभक्तों को सादर नमस्कार 🙏🏻 जय श्री राम हर हर महादेव 🙏🏻🫡💐❤️'
+                  : 'Warm Greetings & Respectful Namaskar to all Sanatan Devotees 🙏🏻 Jay Shri Ram, Har Har Mahadev 🙏🏻💐❤️'}
+              </p>
+            </div>
+
+            {/* Sacred Wisdom Paragraphs */}
+            <div className="mt-8 space-y-5 text-gray-800 leading-relaxed text-base md:text-lg">
+              {sanatanMessageLang === 'hi' ? (
+                <>
+                  <p className="bg-orange-50/70 p-5 rounded-2xl border-l-4 border-orange-600 text-justify leading-relaxed">
+                    भगवत बंधुवों जैसा कि आप जानते ही होंगे कि हिन्दू धर्म की मान्यताओं व सनातन संस्कृति में कर्मकाण्ड (पूजा, पाठ, यज्ञ, हवन और धार्मिक अनुष्ठान) का मुख्य उद्देश्य मन की एकाग्रता एवम् शुद्धि, आध्यात्मिक विकास और सामाजिक एकता एवम् मानव जीवन में अनुशासन लाकर अपना आत्म कल्याण के साथ प्राणिमात्र के कल्याण की कामना करने का प्रमुख साधन के रूप में आनादि कालों से चलता आ रहा है कर्मकाण्ड (धार्मिक अनुष्ठान) केवल बाहरी क्रियाएं नहीं हैं, अपितु यह जीवन को एक सही दिशा और अनुशासन देने का माध्यम भी हैं
+                  </p>
+
+                  <p className="bg-amber-50/70 p-5 rounded-2xl border-l-4 border-amber-600 text-justify leading-relaxed">
+                    बंधुवों कर्मकाण्ड का वास्तविक लाभ तभी मिलता है जब इसे केवल अंधविश्वास या दिखावा न मानकर, इसके गहरे आध्यात्मिक और प्रतीकात्मक अर्थ को समझकर और योग्य (यशास्त्रोक्तविधि विधान जानने वाले) वैदिक विद्वानों के द्वारा किया जाए।
+                  </p>
+
+                  <p className="bg-orange-50/70 p-5 rounded-2xl border-l-4 border-red-600 font-medium text-gray-900 text-justify leading-relaxed">
+                    अत: हम आपके लिए एक प्रकल्प लेकर आये हैं जिसमें हिन्दू सनातन वैदिक परम्परा के अनुसार हमारे तपोनिष्ठ,शास्त्र में श्रद्धा रखने वाले वैदिक ब्राह्मण आपके सभी सत्कर्म को पूर्ण निष्ठा से सम्पादित करातें हैं
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="bg-orange-50/70 p-5 rounded-2xl border-l-4 border-orange-600 text-justify leading-relaxed">
+                    Dear devotees, as you know, in Hindu beliefs and Sanatan culture, Karmakanda (Puja, Path, Yagya, Havan, and religious rituals) has been since time immemorial the supreme medium for concentration and purification of mind, spiritual upliftment, social harmony, and instilling life discipline—seeking both personal salvation and the well-being of all living beings. Sacred rituals are not merely external acts, but a profound medium that provides righteous direction and divine discipline to human life.
+                  </p>
+
+                  <p className="bg-amber-50/70 p-5 rounded-2xl border-l-4 border-amber-600 text-justify leading-relaxed">
+                    Dear friends, the true spiritual benefit of Karmakanda is attained only when it is approached not as blind superstition or mere show, but by understanding its deep spiritual and symbolic essence, conducted by qualified Vedic scholars well-versed in authentic Shastric Vidhi-Vidhan.
+                  </p>
+
+                  <p className="bg-orange-50/70 p-5 rounded-2xl border-l-4 border-red-600 font-medium text-gray-900 text-justify leading-relaxed">
+                    Therefore, we present a sacred initiative wherein, in accordance with Hindu Sanatan Vedic tradition, our devout, austerity-guided, and Shastra-revering Vedic Brahmans conduct all your auspicious ceremonies with complete devotion and fidelity.
+                  </p>
+                </>
+              )}
+            </div>
+
+            {/* List of 12 Anushthans */}
+            <div className="mt-10 pt-8 border-t border-orange-200">
+              <div className="text-center mb-8">
+                <span className="text-orange-600 text-xs md:text-sm font-bold uppercase tracking-widest bg-orange-100 px-4 py-1.5 rounded-full inline-block mb-3">
+                  {sanatanMessageLang === 'hi' ? 'धार्मिक सत्कर्म सूची' : 'Sacred Rituals List'}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  {sanatanMessageLang === 'hi'
+                    ? 'हमारे द्वारा कराए जाने वाले धार्मिक अनुष्ठान हैं …..'
+                    : 'Religious ceremonies and sacred rituals conducted by us:'}
+                </h3>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {sanatanAnushthans.map((item) => (
+                  <div
+                    key={item.num}
+                    className="flex items-start space-x-3.5 p-4 rounded-2xl bg-gradient-to-br from-orange-50/50 to-amber-50/30 border border-orange-200 hover:border-orange-500 hover:shadow-md transition-all group"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold text-sm flex items-center justify-center flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+                      {item.num}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 text-base leading-snug group-hover:text-orange-700 transition-colors">
+                        {sanatanMessageLang === 'hi' ? item.hi : item.en}
+                      </h4>
+                      <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                        {sanatanMessageLang === 'hi' ? item.descHi : item.descEn}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Concluding Message & Contact Details */}
+              <div className="mt-8 p-6 bg-gradient-to-br from-amber-100/80 to-orange-100/80 rounded-2xl border border-orange-300 text-center space-y-4">
+                <p className="text-gray-900 font-bold text-base md:text-lg">
+                  {sanatanMessageLang === 'hi'
+                    ? 'आदि सत्कर्म हिंदू सनातन पूजा पद्धति शास्त्रोक्त विधि व परम्परानुसार यथा विधि सम्पादित कराये जाते हैं'
+                    : 'All these virtuous rites are performed strictly according to Hindu Sanatan scriptural traditions, sacred rituals, and authentic Vedic methods.'}
+                </p>
+                <p className="text-gray-800 text-sm md:text-base font-medium">
+                  {sanatanMessageLang === 'hi'
+                    ? 'आप किसी भी प्रकार के धार्मिक कार्य के लिय हमसे संपर्क कर सकते हैं'
+                    : 'You can contact us for any kind of religious ceremony or spiritual requirement.'}
+                </p>
+
+                <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                  <a
+                    href="tel:+919580758639"
+                    className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all text-sm md:text-base"
+                  >
+                    <Phone className="w-4 h-4" />
+                    <span>{sanatanMessageLang === 'hi' ? 'सम्पर्क सूत्र- 9580758639' : 'Contact: +91 95807 58639'}</span>
+                  </a>
+
+                  <a
+                    href={`https://wa.me/919580758639?text=${encodeURIComponent(
+                      sanatanMessageLang === 'hi'
+                        ? 'नमस्ते पंडित जी! मुझे धार्मिक अनुष्ठान / पूजा के संबंध में बात करनी है।'
+                        : 'Namaste Pandit Ji! I would like to inquire about booking a Vedic Anushthan / Puja.'
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all text-sm md:text-base"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>WhatsApp</span>
+                  </a>
+
+                  <div className="inline-flex items-center px-4 py-2.5 rounded-xl bg-white border border-orange-200 text-xs md:text-sm font-semibold text-gray-700 shadow-sm">
+                    🌐 Website:- <span className="text-orange-700 font-bold ml-1">poojapandits.com</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
