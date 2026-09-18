@@ -748,23 +748,23 @@ export default function Home() {
             {/* Left Column: Text Content */}
             <div className="text-left animate-fade-in">
               {/* Animated Top Badge */}
-              <div className="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-300/30 rounded-full px-6 py-2 mb-8">
-                <span className="text-2xl animate-pulse">🕉️</span>
-                <span className="text-orange-200 font-semibold tracking-wide">Authentic Vedic Rituals</span>
-                <span className="text-2xl animate-pulse">🕉️</span>
+              <div className="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-300/30 rounded-full px-4 py-1.5 sm:px-5 sm:py-2 mb-4 sm:mb-6">
+                <span className="text-base sm:text-xl animate-pulse">🕉️</span>
+                <span className="text-orange-200 text-xs sm:text-sm md:text-base font-semibold tracking-wide">Authentic Vedic Rituals</span>
+                <span className="text-base sm:text-xl animate-pulse">🕉️</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white">
                 <span className="block drop-shadow-2xl">Traditional Vedic</span>
-                <span className="block bg-gradient-to-r from-orange-300 via-yellow-200 to-orange-400 bg-clip-text text-transparent animate-gradient-x text-6xl md:text-8xl py-2">
+                <span className="block bg-gradient-to-r from-orange-300 via-yellow-200 to-orange-400 bg-clip-text text-transparent animate-gradient-x text-4xl sm:text-5xl md:text-6xl lg:text-7xl py-1 sm:py-2">
                   Top Pandit Ji
                 </span>
-                <span className="block text-orange-200 text-3xl md:text-4xl mt-2 font-light tracking-tight italic">
+                <span className="block text-orange-200 text-lg sm:text-xl md:text-2xl mt-1.5 sm:mt-2 font-light tracking-tight italic">
                   Serving Lucknow &amp; all Delhi NCR
                 </span>
               </h1>
 
-              <p className="text-orange-50/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
+              <p className="text-orange-50/80 text-sm sm:text-base md:text-lg mb-8 max-w-xl leading-relaxed">
                 Connect with highly learned Saryuparin Brahman associated with Ayodhya Math for profound devotion and authentic rituals.
               </p>
 
