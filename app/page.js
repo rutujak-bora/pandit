@@ -44,7 +44,7 @@ const services = [
   {
     title: '⭐ Rudrabhishek Puja - Shravan Mas Special',
     description: 'Sacred Rudrabhishek during the auspicious Shravan month for Lord Shiva blessings',
-    image: '/services/wedding-puja.jpeg',
+    image: '/services/rudrabhishek.jpeg',
     icon: '🔱',
     slug: 'rudrabhishek-puja'
   },
@@ -1454,27 +1454,27 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/1.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white font-semibold">Wedding Ceremony</span>
+              <img src="/gallery/1.jpeg" alt="Pandit Sandesh Tiwari" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-2">
+                <span className="text-white font-semibold">Pandit Sandesh Tiwari</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/2.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white font-semibold">Ganesh Puja</span>
+              <img src="/gallery/2.jpeg" alt="Griha Pravesh & Namaskar" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-2">
+                <span className="text-white font-semibold">Griha Pravesh &amp; Namaskar</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/3.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white font-semibold">Navratri Puja</span>
+              <img src="/gallery/3.jpeg" alt="Rudrabhishek Puja" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-2">
+                <span className="text-white font-semibold">Rudrabhishek Puja</span>
               </div>
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden group cursor-pointer">
-              <img src="/gallery/4.jpeg" alt="Gallery" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white font-semibold">Diya Lighting</span>
+              <img src="/gallery/4.jpeg" alt="Vastu Shanti Puja" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-2">
+                <span className="text-white font-semibold">Vastu Shanti Puja</span>
               </div>
             </div>
           </div>
