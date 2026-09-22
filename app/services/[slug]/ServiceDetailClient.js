@@ -3,7 +3,8 @@
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Phone, MessageCircle, Calendar, Clock, CheckCircle2, ArrowLeft, Sparkles } from 'lucide-react'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Phone, MessageCircle, Calendar, Clock, CheckCircle2, ArrowLeft, Sparkles, BookOpen, AlertCircle } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ServiceDetailClient({ service }) {
@@ -100,6 +101,25 @@ export default function ServiceDetailClient({ service }) {
                 </div>
             </div>
 
+            {/* Auspicious Dates Alert Banner (only if service has featured dates) */}
+            {service.auspiciousTime && service.auspiciousTime.periods && service.auspiciousTime.periods.some(p => p.includes('2026')) && (
+                <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white">
+                    <div className="container mx-auto px-4 py-3">
+                        <div className="flex items-center justify-center gap-3 flex-wrap text-center">
+                            <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                            <p className="font-semibold text-sm md:text-base">
+                                {service.slug === 'pitru-paksha-shraddh'
+                                    ? '🕉️ पितृपक्ष 2026: 27 सितम्बर – 10 अक्टूबर 2026 | सर्व पितृ अमावस्या: 10 Oct 2026 — Book Now!'
+                                    : '⭐ Sharad Navratri 2026: 11 Oct – 19 Oct 2026 | Ghatasthapana Muhurat: 06:19 AM – 10:12 AM on 11 Oct — Book Now!'}
+                            </p>
+                            <a href="tel:+919580758639" className="bg-white text-orange-600 px-3 py-1 rounded-full text-sm font-bold hover:bg-orange-50 transition-colors">
+                                +91 95807 58639
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* Main Content */}
             <div className="container mx-auto px-4 py-12">
                 <div className="grid lg:grid-cols-3 gap-8">
@@ -126,6 +146,25 @@ export default function ServiceDetailClient({ service }) {
                                 </div>
                             </div>
                         </section>
+
+                        {/* Vedic Scripture Reference Box (Pitru Puja only) */}
+                        {service.scripture && (
+                            <section>
+                                <div className="flex items-center space-x-3 mb-6">
+                                    <BookOpen className="w-8 h-8 text-orange-600" />
+                                    <h2 className="text-3xl font-bold text-gray-900">{service.scripture.title}</h2>
+                                </div>
+                                <div className="space-y-4">
+                                    {service.scripture.references.map((ref, index) => (
+                                        <div key={index} className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-orange-200 p-6 rounded-xl">
+                                            <h3 className="text-lg font-bold text-orange-700 mb-2">📜 {ref.source}</h3>
+                                            <p className="text-gray-800 font-medium italic mb-2 text-lg">"{ref.text}"</p>
+                                            <p className="text-gray-600 text-sm">{ref.meaning}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
 
                         {/* Benefits Section */}
                         <section>
@@ -183,6 +222,48 @@ export default function ServiceDetailClient({ service }) {
                                 </div>
                             </div>
                         </section>
+
+                        {/* Navadurga 9-Day Table (Navratri only) */}
+                        {service.navadurga && (
+                            <section>
+                                <div className="flex items-center space-x-3 mb-6">
+                                    <span className="text-3xl">🪔</span>
+                                    <h2 className="text-3xl font-bold text-gray-900">नव दुर्गा — 9 Forms of Goddess Durga | Navratri 2026</h2>
+                                </div>
+                                <div className="overflow-x-auto rounded-2xl border-2 border-orange-200">
+                                    <table className="w-full text-sm">
+                                        <thead>
+                                            <tr className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
+                                                <th className="px-4 py-3 text-left">Day / Date</th>
+                                                <th className="px-4 py-3 text-left">Devi Form</th>
+                                                <th className="px-4 py-3 text-left">Auspicious Color</th>
+                                                <th className="px-4 py-3 text-left hidden md:table-cell">Vedic Mantra</th>
+                                                <th className="px-4 py-3 text-left hidden lg:table-cell">Special Bhog</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {service.navadurga.map((devi, index) => (
+                                                <tr key={index} className={index % 2 === 0 ? 'bg-orange-50' : 'bg-white'}>
+                                                    <td className="px-4 py-3 font-bold text-orange-700">Day {devi.day}<br /><span className="text-xs font-normal text-gray-500">{devi.date}</span></td>
+                                                    <td className="px-4 py-3">
+                                                        <span className="font-semibold text-gray-900">{devi.name}</span>
+                                                        <br /><span className="text-xs text-gray-500">{devi.meaning}</span>
+                                                    </td>
+                                                    <td className="px-4 py-3">
+                                                        <span className="inline-block bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-medium">{devi.color}</span>
+                                                    </td>
+                                                    <td className="px-4 py-3 hidden md:table-cell font-medium text-gray-700" style={{ fontFamily: 'serif' }}>{devi.mantra}</td>
+                                                    <td className="px-4 py-3 hidden lg:table-cell text-gray-600">{devi.bhog}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p className="mt-3 text-sm text-gray-500 text-center">
+                                    📍 Book Pandit for Navratri Kalash Sthapana at home — <a href="tel:+919580758639" className="text-orange-600 font-semibold hover:underline">+91 95807 58639</a> | <a href="https://www.poojapandits.com/services/navratri-puja" className="text-orange-600 hover:underline">poojapandits.com/services/navratri-puja</a>
+                                </p>
+                            </section>
+                        )}
 
                         {/* Procedure Section */}
                         <section>
@@ -244,6 +325,31 @@ export default function ServiceDetailClient({ service }) {
                                 </CardContent>
                             </Card>
                         </section>
+
+                        {/* FAQ Section (for AI Mode / Google search) */}
+                        {service.faqs && service.faqs.length > 0 && (
+                            <section>
+                                <div className="flex items-center space-x-3 mb-6">
+                                    <span className="text-3xl">❓</span>
+                                    <h2 className="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                                </div>
+                                <Accordion type="single" collapsible className="space-y-3">
+                                    {service.faqs.map((faq, index) => (
+                                        <AccordionItem key={index} value={`faq-${index}`} className="border-2 border-orange-200 rounded-xl px-4 overflow-hidden">
+                                            <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-orange-600 py-4">
+                                                {faq.question}
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-gray-700 pb-4 leading-relaxed">
+                                                {faq.answer}
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    ))}
+                                </Accordion>
+                                <div className="mt-6 bg-orange-50 border border-orange-200 p-4 rounded-xl text-center text-sm text-gray-600">
+                                    📞 For more questions, call/WhatsApp Pandit Sandesh Tiwari: <a href="tel:+919580758639" className="text-orange-600 font-bold hover:underline">+91 95807 58639</a>
+                                </div>
+                            </section>
+                        )}
                     </div>
 
                     {/* Sidebar */}
