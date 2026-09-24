@@ -1772,7 +1772,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/share/1CcFDtHz9f/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="https://youtube.com/@pandit_sandesh_tiwari?si=8FbR8wnphC4wtAjG" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <a href="https://youtube.com/@panditsandesh_tiwari?si=Mw91B3VbP4TFetfN" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors">
                   <Youtube className="w-7 h-7 -mt-0.5" />
                 </a>
               </div>
