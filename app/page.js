@@ -1912,6 +1912,39 @@ export default function Home() {
       >
         <Phone className="w-6 h-6" />
       </a>
+
+      {/* Floating Instagram Button */}
+      <a
+        href="https://www.instagram.com/pandit_sandesh_tiwari"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-[168px] right-6 z-50 bg-gradient-to-tr from-purple-600 via-pink-500 to-yellow-400 hover:from-purple-700 hover:via-pink-600 hover:to-yellow-500 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
+        aria-label="Instagram"
+      >
+        <Instagram className="w-6 h-6" />
+      </a>
+
+      {/* Floating Facebook Button */}
+      <a
+        href="https://www.facebook.com/share/1CcFDtHz9f/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-[240px] right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
+        aria-label="Facebook"
+      >
+        <Facebook className="w-6 h-6" />
+      </a>
+
+      {/* Floating YouTube Button */}
+      <a
+        href="https://youtube.com/@panditsandesh_tiwari?si=Mw91B3VbP4TFetfN"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-[312px] right-6 z-50 bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
+        aria-label="YouTube"
+      >
+        <Youtube className="w-6 h-6" />
+      </a>
     </div>
   )
 }
