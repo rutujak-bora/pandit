@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -43,10 +44,10 @@ export const metadata = {
     }
   },
   verification: {
-    google: '9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU',
-    other: {
-      'msvalidate.01': 'YOUR_BING_VERIFICATION_CODE'
-    }
+    google: '9cZu1LK2XY02GwgxDs_Urrjtd9iR0EgKSrMPkTtwPHU'
+  },
+  other: {
+    'google-adsense-account': 'ca-pub-3647778216339427'
   },
   alternates: {
     canonical: 'https://www.poojapandits.com'
@@ -66,6 +67,15 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-3647778216339427" />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3647778216339427"
+          crossorigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={inter.className}>
         {children}
         {/* Schema.org markup for Local Business */}
@@ -77,9 +87,9 @@ export default function RootLayout({ children }) {
               '@type': 'LocalBusiness',
               name: 'Pandit Sandesh Tiwari - Best Pandit Ji near me',
               description: 'Professional Hindu priest services for all Vedic ceremonies and pujas in Lucknow and Delhi NCR.',
-              image: 'https://poojapandits.com/og-preview.jpg',
-              '@id': 'https://poojapandits.com',
-              url: 'https://poojapandits.com',
+              image: 'https://www.poojapandits.com/og-preview.jpg',
+              '@id': 'https://www.poojapandits.com',
+              url: 'https://www.poojapandits.com',
               telephone: '+919580758639',
               email: 'contact@panditjiservices.com',
               address: [

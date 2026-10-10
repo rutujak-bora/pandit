@@ -8,6 +8,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages } from 'lucide-react'
 import Link from 'next/link'
+import FestivalCalendarSection from '@/components/FestivalCalendarSection'
+import SamagriChecklistSection from '@/components/SamagriChecklistSection'
+import MobileQuickActionBar from '@/components/MobileQuickActionBar'
 
 // Live Social Proof Notifications Data
 const socialProofNotifications = [
@@ -58,7 +61,7 @@ const services = [
   {
     title: 'New office opening',
     description: 'Auspicious puja for new business and office beginnings',
-    image: '/services/office-opening.png',
+    image: '/services/office-opening.jpeg',
     icon: '🏢',
     slug: 'office-opening'
   },
@@ -1310,6 +1313,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Festival Calendar & Shubh Muhurats (High SEO Traffic Booster) */}
+      <FestivalCalendarSection />
+
+      {/* Puja Samagri Checklist & WhatsApp Shareable Resource */}
+      <SamagriChecklistSection />
+
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -1721,10 +1730,25 @@ export default function Home() {
                 Looking for the <strong>best pandit ji near me</strong>? We provide authentic Vedic services across the entire Delhi NCR region. Our experienced <strong>puja pandit</strong> team is available for home ceremonies, office openings, and large-scale events.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad', 'Greater Noida', 'Dwarka', 'South Delhi', 'Rohini', 'Indirapuram'].map((area) => (
-                  <span key={area} className="bg-white border border-orange-100 px-4 py-2 rounded-lg text-sm font-medium text-orange-700 shadow-sm">
-                    Pandit in {area}
-                  </span>
+                {[
+                  { name: 'Lucknow', slug: 'pandit-in-lucknow' },
+                  { name: 'Delhi', slug: 'pandit-in-delhi' },
+                  { name: 'Noida', slug: 'pandit-in-noida' },
+                  { name: 'Gurgaon', slug: 'pandit-in-gurgaon' },
+                  { name: 'Faridabad', slug: 'pandit-in-faridabad' },
+                  { name: 'Ghaziabad', slug: 'pandit-in-ghaziabad' },
+                  { name: 'Greater Noida', slug: 'pandit-in-noida' },
+                  { name: 'Dwarka Delhi', slug: 'pandit-in-delhi' },
+                  { name: 'Gomti Nagar Lucknow', slug: 'pandit-in-lucknow' },
+                  { name: 'Indirapuram', slug: 'pandit-in-ghaziabad' },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={`/${item.slug}`}
+                    className="bg-white hover:bg-orange-600 hover:text-white border border-orange-200 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-orange-700 shadow-sm transition"
+                  >
+                    Pandit in {item.name} →
+                  </Link>
                 ))}
               </div>
             </div>
@@ -1782,9 +1806,10 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-orange-400 transition-colors">Home</button></li>
-                <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-orange-400 transition-colors">About</button></li>
+                <li><Link href="/about" className="text-gray-400 hover:text-orange-400 transition-colors">About Us</Link></li>
                 <li><button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-orange-400 transition-colors">Services</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-orange-400 transition-colors">Contact</button></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-orange-400 transition-colors">Contact Us</Link></li>
+                <li><Link href="/privacy-policy" className="text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</Link></li>
                 <li>
                   <Link href="/admin/login" className="text-gray-400 hover:text-orange-400 transition-colors">
                     Admin Login
@@ -1945,6 +1970,9 @@ export default function Home() {
       >
         <Youtube className="w-6 h-6" />
       </a>
+
+      {/* Mobile Sticky Quick Action Bar (1-Tap Call, WhatsApp, Booking) */}
+      <MobileQuickActionBar />
     </div>
   )
 }
