@@ -132,6 +132,20 @@ export default function ServiceDetailClient({ service }) {
                                 <h2 className="text-3xl font-bold text-gray-900">{service.significance.title}</h2>
                             </div>
                             <div className="prose prose-lg max-w-none">
+                                <div className="mb-8 rounded-2xl overflow-hidden shadow-lg border-2 border-orange-200">
+                                    <img
+                                        src={service.heroImage}
+                                        alt={service.slug === 'navratri-puja' ? 'Navratri Pooja - Vedic Pandit Booking for Kalash Sthapana & Durga Saptashati Path' : `${service.title} by Pandit Sandesh Tiwari`}
+                                        title={service.slug === 'navratri-puja' ? 'Navratri Pooja Pandit Ji Booking' : service.title}
+                                        className="w-full h-80 object-cover"
+                                    />
+                                    {service.slug === 'navratri-puja' && (
+                                        <div className="bg-orange-50 px-4 py-2 text-xs text-orange-800 font-medium border-t border-orange-200 flex items-center justify-between">
+                                            <span>🪔 Navratri Pooja Booking Open — Lucknow & Delhi NCR</span>
+                                            <span>Vedic Rituals by Pandit Sandesh Tiwari</span>
+                                        </div>
+                                    )}
+                                </div>
                                 <p className="text-gray-700 leading-relaxed mb-6">{service.significance.content}</p>
                                 <div className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-xl">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Spiritual Aspects:</h3>

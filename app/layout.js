@@ -8,7 +8,7 @@ export const metadata = {
   metadataBase: new URL('https://www.poojapandits.com'),
   title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',
   description: 'Book the best Pandit Ji near me for Wedding, Griha Pravesh, and Vedic Pujas in Lucknow and Delhi NCR. Honored with Ved Vibhushan Award. Authentic rituals.',
-  keywords: 'pandit ji near me, Pandit Ji in Lucknow, Best Pandit in Lucknow, Top Pandit Ji in Delhi NCR, Puja Services Lucknow, Wedding Pandit Lucknow, North Indian Pandit, Vedic Puja Services, Pandit for Griha Pravesh, Pandit for Wedding, pooja name',
+  keywords: 'Navratri, Navratri Pooja, Navratri Puja 2026, Navratri Pandit ji near me, pandit ji near me, Pandit Ji in Lucknow, Best Pandit in Lucknow, Top Pandit Ji in Delhi NCR, Navratri Kalash Sthapana, Ghatasthapana Muhurat, Puja Services Lucknow, Wedding Pandit Lucknow, North Indian Pandit, Vedic Puja Services, Pandit for Griha Pravesh, Pandit for Wedding, pooja name',
   authors: [{ name: 'Pandit Sandesh Tiwari' }],
   openGraph: {
     title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',

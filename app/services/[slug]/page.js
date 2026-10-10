@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
     title: service.title,
     description: descText,
     keywords: service.slug === 'navratri-puja'
-      ? 'Navratri Puja 2026, Kalash Sthapana Muhurat 2026, Ghatasthapana Vidhi, Durga Saptashati Path, Chandi Path, Kanya Puja, Navadurga, Pandit for Navratri, Navratri Pandit Lucknow, Navratri Pandit Delhi, Sharad Navratri 2026'
+      ? 'Navratri, Navratri Pooja, Navratri Pooja Booking, Navratri Puja 2026, Kalash Sthapana Muhurat 2026, Ghatasthapana Vidhi, Durga Saptashati Path, Chandi Path, Kanya Puja, Navadurga, Pandit for Navratri, Navratri Pandit Lucknow, Navratri Pandit Delhi, Navratri Pandit Noida, Sharad Navratri 2026'
       : service.slug === 'pitru-paksha-shraddh'
       ? 'Pitru Paksha 2026, Shraddh 2026, Tarpan Vidhi, Pind Daan, Pitru Puja, Pitru Dosha Nivaran, Ancestral Rites, Pandit for Shraddh, Pitru Paksha Pandit Lucknow, Pitru Paksha 2026 dates, Mahalaya Amavasya 2026'
       : undefined,
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: service.title,
+          alt: service.slug === 'navratri-puja' ? 'Navratri Pooja - Pandit Ji Booking' : service.title,
         }
       ],
       type: 'article',

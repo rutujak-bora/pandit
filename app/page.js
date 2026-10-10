@@ -68,7 +68,7 @@ const services = [
   {
     title: '⭐ Navratri Puja — Sharad Navratri 2026',
     description: 'Kalash Sthapana, Durga Saptashati Path, Kanya Puja | 11–19 Oct 2026 | Ghatasthapana Muhurat: 06:19 AM on 11 Oct',
-    image: '/services/navratri-puja.jpeg',
+    image: '/services/navratri-pooja.jpeg',
     icon: '🪔',
     slug: 'navratri-puja'
   },
@@ -661,6 +661,34 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      {/* Navratri Special Promotional Banner */}
+      <div className="bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 text-white text-xs sm:text-sm py-2 px-3 shadow-sm border-b border-orange-400">
+        <div className="container mx-auto flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
+          <div className="flex items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="bg-white/20 text-white text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse flex-shrink-0">
+              🌸 Special Booking
+            </span>
+            <span className="font-semibold truncate">
+              <strong>Navratri Pooja 2026:</strong> Kalash Sthapana & Durga Saptashati Path | Ghatasthapana Shubh Muhurat Booking Open!
+            </span>
+          </div>
+          <div className="flex items-center gap-2 flex-shrink-0 ml-auto">
+            <Link
+              href="/services/navratri-puja"
+              className="bg-white text-orange-700 hover:bg-orange-50 font-bold px-3 py-1 rounded-full text-xs shadow transition-colors inline-flex items-center gap-1"
+            >
+              <span>Book Navratri Puja</span> →
+            </Link>
+            <a
+              href="tel:+919580758639"
+              className="hidden md:inline-flex bg-green-700 hover:bg-green-800 text-white font-bold px-3 py-1 rounded-full text-xs transition-colors items-center gap-1"
+            >
+              <Phone className="w-3 h-3" /> +91 95807 58639
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Sticky Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
         <div className="container mx-auto px-4 py-4">
@@ -1282,7 +1310,9 @@ export default function Home() {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={service.slug === 'navratri-puja' ? 'Navratri Pooja - Pandit Ji Booking for Kalash Sthapana & Durga Saptashati Path' : service.title}
+                      title={service.slug === 'navratri-puja' ? 'Navratri Pooja Booking' : service.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -1309,6 +1339,115 @@ export default function Home() {
                 Contact for Custom Puja
               </Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Navratri Special Booking Spotlight Section (High Conversion & Local SEO) */}
+      <section id="navratri-booking-spotlight" className="py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 border-y-2 border-orange-300">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="bg-white rounded-3xl shadow-2xl border-2 border-orange-300 overflow-hidden">
+            <div className="grid lg:grid-cols-12 gap-0">
+              {/* Left Column: Navratri SEO Image with Badges */}
+              <div className="lg:col-span-5 relative min-h-[320px] lg:min-h-full">
+                <img
+                  src="/services/navratri-pooja.jpeg"
+                  alt="Navratri Pooja - Book Pandit for Kalash Sthapana and Durga Saptashati Path"
+                  title="Navratri Pooja Booking"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
+                  <span>🪔</span> Sharad Navratri 2026 Special
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest block mb-1">
+                    Authentic Vedic Rituals
+                  </span>
+                  <h3 className="text-2xl font-bold leading-tight">
+                    Navratri Pooja &amp; Kalash Sthapana
+                  </h3>
+                  <p className="text-xs text-orange-100 mt-1">
+                    Lucknow • Delhi NCR • Noida • Gurgaon • Doorstep Pandit Services
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Column: Packages, Muhurat & Quick Booking CTA */}
+              <div className="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-bold rounded-full">
+                      📍 Available in Lucknow &amp; Delhi NCR
+                    </span>
+                    <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full">
+                      ✅ Same-Day Slot Confirmation
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+                    Book Experienced Pandit Ji for <span className="text-orange-600">Navratri Pooja</span>
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                    Perform your auspicious <strong>Ghatasthapana (Kalash Sthapana)</strong>, 9-Day <strong>Durga Saptashati (Chandi Path)</strong>, and <strong>Kanya Pujan &amp; Havan</strong> with learned Vedic priests from Ayodhya math. Complete samagri arranged on request.
+                  </p>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                    <div className="bg-orange-50/70 border border-orange-200 rounded-xl p-3 flex items-start gap-2.5">
+                      <span className="text-xl">🏺</span>
+                      <div>
+                        <h4 className="font-bold text-xs sm:text-sm text-gray-900">Ghatasthapana / Day 1</h4>
+                        <p className="text-[11px] text-gray-600">Shubh Muhurat Kalash &amp; Akhand Jyot Sthapana</p>
+                      </div>
+                    </div>
+                    <div className="bg-orange-50/70 border border-orange-200 rounded-xl p-3 flex items-start gap-2.5">
+                      <span className="text-xl">📖</span>
+                      <div>
+                        <h4 className="font-bold text-xs sm:text-sm text-gray-900">Durga Saptashati Path</h4>
+                        <p className="text-[11px] text-gray-600">Complete 700 Shlokas with Samput Vidhi</p>
+                      </div>
+                    </div>
+                    <div className="bg-orange-50/70 border border-orange-200 rounded-xl p-3 flex items-start gap-2.5">
+                      <span className="text-xl">🔥</span>
+                      <div>
+                        <h4 className="font-bold text-xs sm:text-sm text-gray-900">Ashtami / Navami Havan</h4>
+                        <p className="text-[11px] text-gray-600">Pavitra Havan &amp; Poornahuti for family prosperity</p>
+                      </div>
+                    </div>
+                    <div className="bg-orange-50/70 border border-orange-200 rounded-xl p-3 flex items-start gap-2.5">
+                      <span className="text-xl">👧</span>
+                      <div>
+                        <h4 className="font-bold text-xs sm:text-sm text-gray-900">Kanya Pujan Vidhi</h4>
+                        <p className="text-[11px] text-gray-600">Foot washing, Chunri &amp; Prasad distribution</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Booking Call-to-Actions */}
+                <div className="mt-8 pt-6 border-t border-orange-100 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={`https://wa.me/919580758639?text=${encodeURIComponent('🙏 Jai Mata Di! I want to book Pandit Ji for Navratri Pooja (Kalash Sthapana / Durga Saptashati Path). Please share availability.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6 rounded-xl shadow-lg flex items-center justify-center gap-2 text-base">
+                      <MessageCircle className="w-5 h-5" />
+                      Book Navratri Puja on WhatsApp
+                    </Button>
+                  </a>
+                  <a href="tel:+919580758639" className="flex-1">
+                    <Button variant="outline" className="w-full border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-bold py-6 rounded-xl shadow-sm flex items-center justify-center gap-2 text-base">
+                      <Phone className="w-5 h-5" />
+                      Call: +91 95807 58639
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

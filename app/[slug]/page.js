@@ -10,7 +10,7 @@ const locationData = {
     heroSubtitle: 'Trusted Vedic Priest for All Pujas & Ceremonies in Lucknow',
     description: 'Looking for a reliable and experienced pandit ji near me in Lucknow? Pandit Sandesh Tiwari is a highly learned Saryuparin Brahman associated with the oldest math in Ayodhya. Based in Gomti Nagar, we perform all types of pujas, havan, and Vedic ceremonies at your doorstep in Lucknow.',
     areas: ['Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar', 'Hazratganj', 'Ashiyana', 'Vikas Nagar', 'Jankipuram', 'Chowk', 'Aashiana', 'Aminabad'],
-    keywords: 'pandit ji near me, Pandit in Lucknow, Pandit Ji in Lucknow, Best Pandit Lucknow, Pandit for pooja name Lucknow, Vedic Pandit Lucknow, Pandit for Wedding Lucknow, Pandit in Gomti Nagar',
+    keywords: 'Navratri, Navratri Pooja Lucknow, Navratri Pandit in Lucknow, pandit ji near me, Pandit in Lucknow, Pandit Ji in Lucknow, Best Pandit Lucknow, Pandit for pooja name Lucknow, Vedic Pandit Lucknow, Pandit for Wedding Lucknow, Pandit in Gomti Nagar',
     faqs: [
       { q: 'Do you provide pandit services in all Lucknow areas?', a: 'Yes, we cover all areas of Lucknow including Gomti Nagar, Indira Nagar, Aliganj, Mahanagar, Hazratganj and more. We travel to your location.' },
       { q: 'How quickly can a pandit come to my home in Lucknow?', a: 'We offer same-day bookings in Lucknow. Call us and we confirm within 1 hour.' },
@@ -25,7 +25,7 @@ const locationData = {
     heroSubtitle: 'Trusted Vedic Priest for All Pujas & Ceremonies in Noida',
     description: 'Looking for a reliable and experienced pandit ji in Noida? Pandit Sandesh Tiwari is a highly learned Saryuparin Brahman associated with the oldest math in Ayodhya, now serving all sectors of Noida for 15+ years. We perform all types of pujas, havan, and Vedic ceremonies at your doorstep in Noida.',
     areas: ['Sector 18', 'Sector 50', 'Sector 62', 'Sector 93', 'Sector 100', 'Sector 137', 'Sector 150', 'Greater Noida', 'Expressway', 'Indirapuram', 'Vasundhara', 'Vaishali', 'Crossings Republik', 'Noida Extension'],
-    keywords: 'Pandit in Noida, Pandit Ji in Noida, Best Pandit Noida, Pandit for Puja in Noida, Vedic Pandit Noida, Pandit for Wedding Noida, Pandit in Noida Sector 50, Pandit in Noida Sector 62',
+    keywords: 'Navratri Pooja Noida, Navratri Pandit Noida, Pandit in Noida, Pandit Ji in Noida, Best Pandit Noida, Pandit for Puja in Noida, Vedic Pandit Noida, Pandit for Wedding Noida, Pandit in Noida Sector 50, Pandit in Noida Sector 62',
     faqs: [
       { q: 'Do you provide pandit services in all Noida sectors?', a: 'Yes, we cover all sectors of Noida including Sector 18, 50, 62, 93, 100, 137, 150 and Greater Noida. We travel to your location.' },
       { q: 'How quickly can a pandit come to my home in Noida?', a: 'We offer same-day bookings in Noida. Call us and we confirm within 1 hour.' },
@@ -40,7 +40,7 @@ const locationData = {
     heroSubtitle: 'Trusted Vedic Priest for All Pujas & Ceremonies in Gurgaon',
     description: 'Searching for the best pandit ji in Gurgaon? Pandit Sandesh Tiwari brings 15+ years of experience performing authentic Vedic ceremonies across all areas of Gurgaon and Gurugram. We specialise in Wedding Puja, Griha Pravesh, Rudrabhishek, and all Hindu rituals at your home.',
     areas: ['DLF Phase 1', 'DLF Phase 2', 'DLF Phase 3', 'DLF Phase 4', 'DLF Phase 5', 'Sohna Road', 'Golf Course Road', 'Sector 14', 'Sector 56', 'MG Road', 'Palam Vihar', 'Cyber City', 'South City', 'Nirvana Country'],
-    keywords: 'Pandit in Gurgaon, Pandit Ji in Gurgaon, Best Pandit Gurgaon, Pandit for Puja Gurgaon, Vedic Pandit Gurgaon, Pandit for Wedding Gurgaon, Pandit in DLF Gurgaon, Pandit in Gurugram',
+    keywords: 'Navratri Pooja Gurgaon, Navratri Pandit Gurgaon, Pandit in Gurgaon, Pandit Ji in Gurgaon, Best Pandit Gurgaon, Pandit for Puja Gurgaon, Vedic Pandit Gurgaon, Pandit for Wedding Gurgaon, Pandit in DLF Gurgaon, Pandit in Gurugram',
     faqs: [
       { q: 'Do you provide pandit services in DLF Gurgaon?', a: 'Yes, we cover DLF Phase 1 to 5, Sohna Road, Golf Course Road, MG Road and all other areas of Gurgaon.' },
       { q: 'Can you perform Griha Pravesh puja in Gurgaon?', a: 'Yes, Griha Pravesh is one of our most popular services in Gurgaon. We arrange all samagri and perform the complete ritual.' },
@@ -55,7 +55,7 @@ const locationData = {
     heroSubtitle: 'Trusted Vedic Priest for All Pujas & Ceremonies in Delhi',
     description: 'Need a learned pandit ji in Delhi for your puja or ceremony? Pandit Sandesh Tiwari is a Saryuparin Brahman with Acharya degree from Sampurnanand Sanskrit Vishwavidyalay and M.A. in Sanskrit from Shri Lal Bahadur Shastri National Sanskrit University. Serving all areas of Delhi for over 15 years.',
     areas: ['Connaught Place', 'Dwarka', 'Rohini', 'Janakpuri', 'Vasant Kunj', 'Saket', 'Lajpat Nagar', 'Karol Bagh', 'Mayur Vihar', 'Preet Vihar', 'Pitampura', 'Paschim Vihar', 'Uttam Nagar', 'Tilak Nagar'],
-    keywords: 'Pandit in Delhi, Pandit Ji in Delhi, Best Pandit Delhi, Pandit for Puja Delhi, Vedic Pandit Delhi, Pandit for Wedding Delhi, North Indian Pandit Delhi, Pandit in Dwarka Delhi',
+    keywords: 'Navratri, Navratri Pooja Delhi, Navratri Pandit Delhi, Pandit in Delhi, Pandit Ji in Delhi, Best Pandit Delhi, Pandit for Puja Delhi, Vedic Pandit Delhi, Pandit for Wedding Delhi, North Indian Pandit Delhi, Pandit in Dwarka Delhi',
     faqs: [
       { q: 'Which areas of Delhi do you cover?', a: 'We cover all areas of Delhi including Dwarka, Rohini, Janakpuri, Vasant Kunj, Saket, Lajpat Nagar, Karol Bagh, Mayur Vihar and more.' },
       { q: 'Do you offer muhurat consultation in Delhi?', a: 'Yes, we provide free muhurat consultation for all bookings in Delhi. Just call or WhatsApp us.' },
