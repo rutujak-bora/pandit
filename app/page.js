@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages } from 'lucide-react'
+import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Clock, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages } from 'lucide-react'
 import Link from 'next/link'
 import FestivalCalendarSection from '@/components/FestivalCalendarSection'
 import SamagriChecklistSection from '@/components/SamagriChecklistSection'
@@ -337,26 +337,43 @@ const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
               </select>
             </div>
 
-            <div className={compact ? 'grid grid-cols-1' : 'grid grid-cols-2 gap-4'}>
-              <div className="relative">
-                <Input
-                  type="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  placeholder="Preferred Date"
-                  className={`border-orange-200 focus:border-orange-500 bg-orange-50/30 ${compact ? 'h-10 text-sm' : 'h-12'}`}
-                />
+            <div className="space-y-1.5">
+              <div className="flex items-center justify-between text-xs font-semibold text-orange-900 px-0.5">
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-orange-600" />
+                  Date of Pooja for Booking *
+                </span>
+                <span className="flex items-center gap-1.5 text-gray-600 font-medium">
+                  <Clock className="w-3.5 h-3.5 text-orange-600" />
+                  Select Time (Optional)
+                </span>
               </div>
-              {!compact && (
-                <Input
-                  type="time"
-                  name="time"
-                  value={formData.time}
-                  onChange={handleChange}
-                  className="border-orange-200 focus:border-orange-500 bg-orange-50/30 h-12"
-                />
-              )}
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
+                <div className="relative">
+                  <Input
+                    type="date"
+                    name="date"
+                    aria-label="Date of Pooja for Booking"
+                    value={formData.date}
+                    onChange={handleChange}
+                    required
+                    className={`border-orange-200 focus:border-orange-500 bg-orange-50/30 font-medium text-gray-700 ${compact ? 'h-10 text-xs sm:text-sm' : 'h-12 text-sm'}`}
+                  />
+                </div>
+                <div className="relative">
+                  <Input
+                    type="time"
+                    name="time"
+                    aria-label="Particular Time for Pooja"
+                    value={formData.time}
+                    onChange={handleChange}
+                    className={`border-orange-200 focus:border-orange-500 bg-orange-50/30 font-medium text-gray-700 ${compact ? 'h-10 text-xs sm:text-sm' : 'h-12 text-sm'}`}
+                  />
+                </div>
+              </div>
+              <p className="text-[10px] sm:text-[11px] text-gray-500 px-0.5">
+                📅 Choose your preferred date &amp; particular time (or discuss best Shubh Muhurat with Pandit Ji)
+              </p>
             </div>
 
             <div className="relative">
