@@ -19,7 +19,7 @@ export const metadata = {
     siteName: 'Pandit Ji Services',
     images: [
       {
-        url: 'https://www.poojapandits.com/og-preview.jpg',
+        url: 'https://www.poojapandits.com/og-preview.jpg?v=2',
         width: 1200,
         height: 630,
         alt: 'Pandit Sandesh Tiwari - Best Pandit Ji in Lucknow & Delhi NCR',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',
     description: 'Book the best Pandit Ji near me for Wedding, Griha Pravesh. Authentic Hindu ceremonies.',
-    images: ['https://www.poojapandits.com/og-preview.jpg'],
+    images: ['https://www.poojapandits.com/og-preview.jpg?v=2'],
   },
   robots: {
     index: true,
@@ -69,6 +69,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-3647778216339427" />
+        <meta property="og:image" content="https://www.poojapandits.com/og-preview.jpg?v=2" />
+        <meta property="og:image:secure_url" content="https://www.poojapandits.com/og-preview.jpg?v=2" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta itemProp="image" content="https://www.poojapandits.com/og-preview.jpg?v=2" />
+        <link rel="image_src" href="https://www.poojapandits.com/og-preview.jpg?v=2" />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3647778216339427"
