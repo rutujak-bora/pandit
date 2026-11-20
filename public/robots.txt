@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
 
+# Disallow internal admin & technical API endpoints from crawlers
+Disallow: /admin
+Disallow: /api/
+Disallow: /test_reports/
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /
+Allow: /services/
+Allow: /pandit-in-*
+
+# Canonical Sitemap index
 Sitemap: https://www.poojapandits.com/sitemap.xml

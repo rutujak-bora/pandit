@@ -6,9 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   metadataBase: new URL('https://www.poojapandits.com'),
-  title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',
-  description: 'Book the best Pandit Ji near me for Wedding, Griha Pravesh, and Vedic Pujas in Lucknow and Delhi NCR. Honored with Ved Vibhushan Award. Authentic rituals.',
-  keywords: 'Navratri, Navratri Pooja, Navratri Puja 2026, Navratri Pandit ji near me, pandit ji near me, Pandit Ji in Lucknow, Best Pandit in Lucknow, Top Pandit Ji in Delhi NCR, Navratri Kalash Sthapana, Ghatasthapana Muhurat, Puja Services Lucknow, Wedding Pandit Lucknow, North Indian Pandit, Vedic Puja Services, Pandit for Griha Pravesh, Pandit for Wedding, pooja name',
+  title: 'Best Pandit Ji in Lucknow & Delhi NCR | Vedic Puja, Wedding & Griha Pravesh',
+  description: 'Book verified Vedic Pandit Ji near me in Lucknow, Delhi, Noida & Gurgaon for Griha Pravesh, Vivah Sanskar, Rudrabhishek & Hawan. 15+ Yrs Exp, Ved Vibhushan Awardee.',
+  keywords: 'pandit ji near me, best pandit in lucknow, pandit in lucknow gomti nagar, pandit ji in delhi, pandit in noida, pandit in gurgaon, pandit for griha pravesh, pandit for wedding ceremony, vedic pandit ji, satyanarayan katha pandit, rudrabhishek puja pandit, hawan pandit near me, online pandit booking, puja samagri, navratri puja pandit',
   authors: [{ name: 'Pandit Sandesh Tiwari' }],
   openGraph: {
     title: 'Top Pandit Ji in Lucknow & Delhi NCR – Sandesh Tiwari',
@@ -85,71 +85,147 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {children}
-        {/* Schema.org markup for Local Business */}
+        {/* Schema.org markup for Local Business & FAQ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              name: 'Pandit Sandesh Tiwari - Best Pandit Ji near me',
-              description: 'Professional Hindu priest services for all Vedic ceremonies and pujas in Lucknow and Delhi NCR.',
-              image: 'https://www.poojapandits.com/og-preview.jpg',
-              '@id': 'https://www.poojapandits.com',
-              url: 'https://www.poojapandits.com',
-              telephone: '+919580758639',
-              email: 'contact@panditjiservices.com',
-              address: [
-                {
-                  '@type': 'PostalAddress',
-                  streetAddress: 'Vishvas Khand 4, Near Dukh Harni Shailani Mata Mandir, Jugauli Crossing, Gomti Nagar',
-                  addressLocality: 'Lucknow',
-                  postalCode: '226010',
-                  addressRegion: 'Uttar Pradesh',
-                  addressCountry: 'IN'
-                },
-                {
-                  '@type': 'PostalAddress',
-                  streetAddress: 'b3/198 Vishwash Khand, Gomti Nagar',
-                  addressLocality: 'Lucknow',
-                  postalCode: '226010',
-                  addressRegion: 'Uttar Pradesh',
-                  addressCountry: 'IN'
-                },
-                {
-                  '@type': 'PostalAddress',
-                  streetAddress: 'Katwaria Sarai',
-                  addressLocality: 'New Delhi',
-                  postalCode: '110016',
-                  addressRegion: 'Delhi',
-                  addressCountry: 'IN'
-                }
-              ],
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 26.8467,
-                longitude: 80.9462
-              },
-              openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                  'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'LocalBusiness',
+                name: 'Pandit Sandesh Tiwari - Best Vedic Pandit Ji',
+                alternateName: ['Pandit Ji Services', 'Pooja Pandits', 'Vedic Priest Lucknow Delhi'],
+                description: 'Highly learned Saryuparin Brahman associated with Ayodhya Math. Ved Vibhushan awardee offering authentic Hindu pujas, Griha Pravesh, Vivah, Rudrabhishek and Hawan at home in Lucknow, Delhi, Noida & Gurgaon.',
+                image: 'https://www.poojapandits.com/og-preview.jpg?v=3',
+                '@id': 'https://www.poojapandits.com/#organization',
+                url: 'https://www.poojapandits.com',
+                telephone: '+919580758639',
+                email: 'contact@panditjiservices.com',
+                address: [
+                  {
+                    '@type': 'PostalAddress',
+                    streetAddress: 'Vishvas Khand 4, Near Dukh Harni Shailani Mata Mandir, Jugauli Crossing, Gomti Nagar',
+                    addressLocality: 'Lucknow',
+                    postalCode: '226010',
+                    addressRegion: 'Uttar Pradesh',
+                    addressCountry: 'IN'
+                  },
+                  {
+                    '@type': 'PostalAddress',
+                    streetAddress: 'b3/198 Vishwash Khand, Gomti Nagar',
+                    addressLocality: 'Lucknow',
+                    postalCode: '226010',
+                    addressRegion: 'Uttar Pradesh',
+                    addressCountry: 'IN'
+                  },
+                  {
+                    '@type': 'PostalAddress',
+                    streetAddress: 'Katwaria Sarai',
+                    addressLocality: 'New Delhi',
+                    postalCode: '110016',
+                    addressRegion: 'Delhi',
+                    addressCountry: 'IN'
+                  }
                 ],
-                opens: '06:00',
-                closes: '21:00'
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 26.8467,
+                  longitude: 80.9462
+                },
+                openingHoursSpecification: {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: [
+                    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
+                  ],
+                  opens: '06:00',
+                  closes: '21:00'
+                },
+                priceRange: '₹₹',
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.9',
+                  reviewCount: '500',
+                  bestRating: '5',
+                  worstRating: '1'
+                },
+                areaServed: [
+                  { '@type': 'City', name: 'Lucknow' },
+                  { '@type': 'City', name: 'Delhi' },
+                  { '@type': 'City', name: 'Noida' },
+                  { '@type': 'City', name: 'Gurgaon' },
+                  { '@type': 'City', name: 'Faridabad' },
+                  { '@type': 'City', name: 'Ghaziabad' }
+                ],
+                serviceType: [
+                  'Wedding Puja Vivah Sanskar',
+                  'Griha Pravesh Puja',
+                  'Rudrabhishek Puja',
+                  'Satyanarayan Katha Hawan',
+                  'Navratri Puja Kalash Sthapana',
+                  'Office Opening Business Puja',
+                  'Vastu Shanti Puja',
+                  'Maha Mrityunjaya Jaap Anushthan',
+                  'Naamkaran Sanskar',
+                  'Sunderkand Path'
+                ],
+                hasOfferCatalog: {
+                  '@type': 'OfferCatalog',
+                  name: 'Vedic Puja Services',
+                  itemListElement: [
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Vedic Puja Vidhi Only',
+                        description: 'Vedic ritual guidance and mantra chanting by Ayodhya Math Pandit Ji'
+                      },
+                      price: '1500',
+                      priceCurrency: 'INR'
+                    },
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Complete Puja with 100% Samagri Included',
+                        description: 'Vedic priest with all sacred Hawan and Puja materials brought to your doorstep'
+                      },
+                      price: '3500',
+                      priceCurrency: 'INR'
+                    }
+                  ]
+                }
               },
-              priceRange: '$$',
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                reviewCount: '500'
-              },
-              areaServed: ['Lucknow', 'Delhi', 'Gurgaon', 'Noida', 'Faridabad', 'Ghaziabad'],
-              serviceType: [
-                'Wedding Ceremony', 'Griha Pravesh', 'Navratri Puja', 'Ganesh Puja',
-                'Naamkaran Sanskar', 'Satyanarayan Katha', 'Vastu Shanti', 'Hindu Rituals'
-              ]
-            })
+              {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'How can I book a Pandit Ji near me in Lucknow or Delhi NCR?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'You can book verified Vedic Pandit Sandesh Tiwari directly by calling or sending a WhatsApp message to +91 95807 58639. Same-day bookings and free Shubh Muhurat consultation are provided.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Does Pandit Ji bring all Hawan and Puja Samagri?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes! We offer a Complete Package where 100% pure desi ghee, sacred mango hawan wood, navgrah samagri, dry fruits, and puja essentials are provided by Pandit Ji.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'What types of pujas do you perform at home?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'We perform all Vedic rituals including Wedding (Vivah Sanskar), Griha Pravesh, Satyanarayan Katha, Rudrabhishek, Navratri Durga Saptashati Path, Office Opening, Vastu Shanti, Naamkaran, and Sunderkand Path.'
+                    }
+                  }
+                ]
+              }
+            ])
           }}
         />
       </body>
