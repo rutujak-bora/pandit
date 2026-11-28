@@ -4,6 +4,42 @@ import React, { useState } from 'react'
 import { CheckSquare, Share2, Download, Copy, Check, MessageCircle, Sparkles } from 'lucide-react'
 
 const samagriTemplates = {
+  'complete-list': {
+    title: 'Complete Vedic Puja Samagri List (48+ Items)',
+    hindiTitle: 'सम्पूर्ण वैदिक पूजा एवं हवन सामग्री सूची (मात्रा सहित)',
+    description: 'चावल, रोली, कलावा, गंगाजल, हवन सामग्री, घी, आम पत्ता, नारियल सहित सम्पूर्ण लिस्ट मात्रा अनुसार।',
+    items: [
+      'चावल (अक्षत) — 500 gm',
+      'रोली (कुमकुम) — 10 gm',
+      'मौली (कलावा) — 2 Piece',
+      'अबीर-गुलाल — 1 पैकेट',
+      'सिन्दूर (1 Piece) एवं हल्दी पाउडर (10 gm)',
+      'मधु (शहद) — 1 शीशी',
+      'केसर — 1 डिब्बी',
+      'कपूर — 10 gm & माचिस — 2 Piece',
+      'धूपबत्ती — 1 पैकेट & रुई (कपास) — 1 पैकेट',
+      'इत्र (सेंट) — 1 शीशी & पीली सरसों — 10 gm',
+      'गुड़ — 250 gm & बड़ी सुपारी — 50 gm',
+      'दोना — 2 पैकेट & जनेऊ — 5 Piece',
+      'लौंग एवं इलायची — 10 gm & पंचमेवा — 50 gm',
+      'गंगा जल (1 बोतल) & कलश (मिट्टी/तांबा) — 1 Piece',
+      'जटा वाला नारियल (1 Piece) & सूखा नारियल गोला (1 Piece)',
+      'मिट्टी दीपक — 5 छोटा & 1 बड़ा दीपक',
+      'कपड़ा (लाल अथवा पीला) — 1 मीटर',
+      'तिल (काला तिल) — 200 gm & जौ — 50 gm',
+      'सतवारी (10 gm) & जटामासी (10 gm)',
+      'कमलगट्टा — 11 दाने & गूगल धूप — 10 gm',
+      'शुद्ध देशी गाय का घी — 1 kg',
+      'बड़ी लकड़ी (आम की समिधा) — 2 kg & नवग्रह लकड़ी — 1 पैकेट',
+      'खुले फूल (गुलाब/गेंदा) — 500 gm & फूलमाला — 5 Piece',
+      'आम के पत्ते (2 डाली) & केले के पत्ते (5 Piece)',
+      'पान के पत्ते — 11 Piece & दूर्वा (दूब घास)',
+      'थाली एवं कटोरी — 2 Set & आसन (बैठने हेतु बेडशीट)',
+      'ताजा गाय का दूध एवं दही (यथाशक्ति)',
+      'ऋतुफल एवं मिष्ठान्न (प्रसाद यथासम्भव)',
+      'लकड़ी की चौकी (पाटा — 1 Piece) & हवन कुण्ड (1 Piece)'
+    ]
+  },
   'griha-pravesh': {
     title: 'Griha Pravesh Puja Samagri List',
     hindiTitle: 'गृह प्रवेश पूजन सामग्री सूची',
@@ -70,7 +106,7 @@ const samagriTemplates = {
 }
 
 export default function SamagriChecklistSection() {
-  const [activeTab, setActiveTab] = useState('griha-pravesh')
+  const [activeTab, setActiveTab] = useState('complete-list')
   const [copied, setCopied] = useState(false)
 
   const currentSamagri = samagriTemplates[activeTab]
@@ -175,15 +211,23 @@ export default function SamagriChecklistSection() {
                 Pandit Sandesh Tiwari can bring 100% pure, authentic samagri directly to your home!
               </div>
             </div>
-            <a
-              href={`https://wa.me/919580758639?text=${encodeURIComponent(`Namaste Pandit Ji, please arrange full samagri for ${currentSamagri.title}.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold flex-shrink-0 shadow-sm"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Arrange Samagri For Me</span>
-            </a>
+            <div className="flex items-center gap-2 flex-wrap">
+              <a
+                href="/puja-samagri-list"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-orange-300 text-orange-800 hover:bg-orange-50 text-xs font-bold flex-shrink-0 shadow-sm"
+              >
+                <span>सम्पूर्ण 48+ लिस्ट देखें</span>
+              </a>
+              <a
+                href={`https://wa.me/919580758639?text=${encodeURIComponent(`Namaste Pandit Ji, please arrange full samagri for ${currentSamagri.title}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold flex-shrink-0 shadow-sm"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Arrange Samagri For Me</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

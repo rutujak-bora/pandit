@@ -3,9 +3,17 @@
   <!-- Core Home Page -->
   <url>
     <loc>https://www.poojapandits.com/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Complete Puja Samagri List (SEO Target for Puja Products) -->
+  <url>
+    <loc>https://www.poojapandits.com/puja-samagri-list</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.96</priority>
   </url>
 
   <!-- High-Demand Major Puja Services -->

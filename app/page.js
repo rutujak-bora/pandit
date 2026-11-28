@@ -727,6 +727,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Home</button>
               <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('packages')} className="text-orange-600 hover:text-orange-700 font-bold transition-colors">Packages &amp; Dakshina</button>
+              <Link href="/puja-samagri-list" className="text-amber-800 hover:text-orange-600 font-bold transition-colors">पूजा सामग्री लिस्ट</Link>
               <button onClick={() => scrollToSection('muhurat-finder')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Shubh Muhurat</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</button>
               <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Testimonials</button>
@@ -773,6 +774,7 @@ export default function Home() {
                 <Calendar className="w-4 h-4 text-orange-600" /> Book Puja Online
               </button>
               <button onClick={() => scrollToSection('packages')} className="text-left text-orange-600 font-bold transition-colors">Packages &amp; Dakshina</button>
+              <Link href="/puja-samagri-list" className="text-left text-amber-800 font-bold transition-colors">📦 पूजा सामग्री लिस्ट (मात्रा सहित)</Link>
               <button onClick={() => scrollToSection('muhurat-finder')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Shubh Muhurat Finder</button>
               <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">About</button>
