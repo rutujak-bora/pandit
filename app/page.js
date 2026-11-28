@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Clock, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages } from 'lucide-react'
+import { Phone, Mail, MapPin, Star, CheckCircle2, Calendar, Clock, Users, Award, Heart, MessageCircle, Instagram, Facebook, Youtube, X, Languages, ShoppingBag, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import FestivalCalendarSection from '@/components/FestivalCalendarSection'
 import SamagriChecklistSection from '@/components/SamagriChecklistSection'
@@ -289,6 +289,25 @@ const BookingForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
                 <Phone className="w-4 h-4" /> Call Pandit Ji (+91 95807 58639)
               </Button>
             </a>
+
+            {/* After Booking Confirmation: Puja Samagri / Product List Card */}
+            <div className="p-4 bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl text-left space-y-2 mt-2">
+              <div className="flex items-center gap-2 text-amber-950 font-bold text-sm">
+                <span className="text-xl">🛍️</span>
+                <span>पूजा की तैयारी: आवश्यक सामग्री लिस्ट</span>
+              </div>
+              <p className="text-xs text-amber-900 leading-relaxed">
+                अपनी पूजा के लिए 48+ आवश्यक सामग्री (चावल, रोली, कलावा, धूप, हवन कुण्ड आदि) की पूरी सूची मात्रा सहित देखें:
+              </p>
+              <Link href="/puja-samagri-list" className="block w-full">
+                <Button className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold py-3.5 text-sm rounded-xl shadow-md flex items-center justify-center gap-2">
+                  <ShoppingBag className="w-4 h-4 text-yellow-200" />
+                  <span>📋 48+ पूजा सामग्री लिस्ट देखें (Product List)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
+
             <button
               type="button"
               onClick={resetFormState}
@@ -853,7 +872,7 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Mobile Quick Action Buttons (Call + WhatsApp) */}
+            {/* Mobile Quick Action Buttons (Call + WhatsApp + Samagri List) */}
             <div className="grid grid-cols-2 gap-2.5 pt-1">
               <a href="tel:+919580758639" className="w-full">
                 <Button size="sm" className="w-full bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md font-semibold py-2.5 h-auto text-xs sm:text-sm rounded-xl shadow-lg flex items-center justify-center gap-1.5">
@@ -866,6 +885,15 @@ export default function Home() {
                 </Button>
               </a>
             </div>
+
+            {/* Mobile Hero Button for Puja Samagri / Product List */}
+            <Link href="/puja-samagri-list" className="block w-full">
+              <Button size="sm" className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold py-2.5 h-auto text-xs sm:text-sm rounded-xl shadow-lg flex items-center justify-center gap-2 border border-amber-300/40">
+                <ShoppingBag className="w-4 h-4 text-yellow-200" />
+                <span>📋 48+ पूजा सामग्री लिस्ट देखें (Product List)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Button>
+            </Link>
 
             {/* Mobile Booking Form - Positioned Right on Top for Mobile */}
             <div id="booking-form-hero" className="pt-2">
@@ -935,20 +963,29 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Quick Contact Buttons */}
-              <div className="flex flex-col sm:flex-row gap-5 mb-12">
+              {/* Quick Contact & Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-4">
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-green-500/40 transform hover:-translate-y-1 transition-all duration-300 py-7 text-lg rounded-2xl">
-                    <MessageCircle className="w-6 h-6 mr-3 animate-bounce" />
+                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-green-500/40 transform hover:-translate-y-1 transition-all duration-300 py-6 text-base md:text-lg rounded-2xl flex items-center justify-center">
+                    <MessageCircle className="w-5 h-5 mr-2 animate-bounce" />
                     WhatsApp
                   </Button>
                 </a>
                 <a href="tel:+919580758639" className="flex-1">
-                  <Button size="lg" className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md shadow-xl transform hover:-translate-y-1 transition-all duration-300 py-7 text-lg rounded-2xl">
-                    <Phone className="w-6 h-6 mr-3" />
+                  <Button size="lg" className="w-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md shadow-xl transform hover:-translate-y-1 transition-all duration-300 py-6 text-base md:text-lg rounded-2xl flex items-center justify-center">
+                    <Phone className="w-5 h-5 mr-2" />
                     Call Now
                   </Button>
                 </a>
+              </div>
+              <div className="mb-10">
+                <Link href="/puja-samagri-list" className="block">
+                  <Button size="lg" className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold border border-amber-300/40 shadow-xl hover:shadow-orange-500/40 transform hover:-translate-y-1 transition-all duration-300 py-6 text-base md:text-lg rounded-2xl flex items-center justify-center gap-2">
+                    <ShoppingBag className="w-5 h-5 text-yellow-200" />
+                    <span>📋 पूजा सामग्री लिस्ट देखें (48+ Items Product List)</span>
+                    <ArrowRight className="w-5 h-5 ml-1" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -1886,6 +1923,32 @@ export default function Home() {
                 description="Instant confirmation & free muhurat consultation"
               />
             </div>
+          </div>
+
+          {/* After Booking Section: Puja Samagri Product List Card */}
+          <div className="mt-12 p-6 sm:p-8 bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 rounded-2xl border-2 border-amber-300 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-3xl shadow-md shrink-0">
+                🛍️
+              </div>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">
+                  Puja Preparation Checklist
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                  पूजा के लिए आवश्यक सामान (48+ Puja Samagri List)
+                </h3>
+                <p className="text-gray-600 text-sm mt-1 max-w-xl">
+                  हवन, गृह प्रवेश, सत्यनारायण कथा व सभी पूजा के लिए 48+ प्रामाणिक सामग्री की पूरी लिस्ट मात्रा (Quantity) सहित देखें और पहले से तैयार रखें।
+                </p>
+              </div>
+            </div>
+            <Link href="/puja-samagri-list" className="w-full md:w-auto shrink-0">
+              <Button size="lg" className="w-full md:w-auto bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold py-6 px-8 text-base rounded-xl shadow-lg flex items-center justify-center gap-2">
+                <ShoppingBag className="w-5 h-5 text-yellow-200" />
+                <span>48+ पूजा सामग्री लिस्ट देखें →</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

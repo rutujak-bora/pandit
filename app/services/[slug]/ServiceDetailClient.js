@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Phone, MessageCircle, Calendar, Clock, CheckCircle2, ArrowLeft, Sparkles, BookOpen, AlertCircle } from 'lucide-react'
+import { Phone, MessageCircle, Calendar, Clock, CheckCircle2, ArrowLeft, Sparkles, BookOpen, AlertCircle, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ServiceDetailClient({ service }) {
@@ -84,7 +84,7 @@ export default function ServiceDetailClient({ service }) {
             {/* Quick Action Bar */}
             <div className="bg-orange-50 border-b border-orange-100 sticky top-[72px] z-40">
                 <div className="container mx-auto px-4 py-3">
-                    <div className="flex flex-wrap gap-3 justify-center">
+                    <div className="flex flex-wrap gap-3 justify-center items-center">
                         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                             <Button size="sm" className="bg-green-600 hover:bg-green-700">
                                 <MessageCircle className="w-4 h-4 mr-2" />
@@ -97,6 +97,12 @@ export default function ServiceDetailClient({ service }) {
                                 Call: +91 95807 58639
                             </Button>
                         </a>
+                        <Link href="/puja-samagri-list">
+                            <Button size="sm" className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold">
+                                <ShoppingBag className="w-4 h-4 mr-1.5" />
+                                पूजा सामग्री लिस्ट (Product List)
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -413,19 +419,30 @@ export default function ServiceDetailClient({ service }) {
                             </Card>
 
                             {/* Samagri Included */}
-                            <Card>
-                                <CardHeader className="bg-orange-50">
-                                    <CardTitle className="text-lg">Samagri Included</CardTitle>
+                            <Card className="border border-amber-200 shadow-md">
+                                <CardHeader className="bg-amber-50/80">
+                                    <CardTitle className="text-lg flex items-center justify-between">
+                                        <span>Samagri Included</span>
+                                        <span className="text-xs font-normal text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full">Checklist</span>
+                                    </CardTitle>
                                 </CardHeader>
-                                <CardContent className="pt-4">
+                                <CardContent className="pt-4 space-y-4">
                                     <ul className="space-y-2 text-sm text-gray-700">
                                         {service.samagriIncluded.map((item, index) => (
                                             <li key={index} className="flex items-start space-x-2">
-                                                <span className="text-orange-600">✓</span>
+                                                <span className="text-orange-600 font-bold">✓</span>
                                                 <span>{item}</span>
                                             </li>
                                         ))}
                                     </ul>
+                                    <div className="pt-3 border-t border-amber-100">
+                                        <Link href="/puja-samagri-list" className="block">
+                                            <Button variant="outline" className="w-full border-amber-500 text-amber-800 hover:bg-amber-50 font-bold text-xs py-2.5 h-auto flex items-center justify-center gap-1.5 rounded-lg shadow-sm">
+                                                <ShoppingBag className="w-3.5 h-3.5" />
+                                                <span>सम्पूर्ण 48+ पूजा सामग्री लिस्ट देखें →</span>
+                                            </Button>
+                                        </Link>
+                                    </div>
                                 </CardContent>
                             </Card>
 
