@@ -742,11 +742,13 @@ export default function Home() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-6">
+            <nav className="hidden md:flex space-x-6 items-center">
               <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Home</button>
               <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('packages')} className="text-orange-600 hover:text-orange-700 font-bold transition-colors">Packages &amp; Dakshina</button>
-              <Link href="/puja-samagri-list" className="text-amber-800 hover:text-orange-600 font-bold transition-colors">पूजा सामग्री लिस्ट</Link>
+              <button onClick={() => scrollToSection('pooja-samagri')} className="text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-300 px-3 py-1 rounded-full font-bold transition-colors flex items-center gap-1.5 shadow-2xs">
+                <span>🛍️ Pooja Samagri</span>
+              </button>
               <button onClick={() => scrollToSection('muhurat-finder')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Shubh Muhurat</button>
               <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">About</button>
               <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Testimonials</button>
@@ -793,7 +795,9 @@ export default function Home() {
                 <Calendar className="w-4 h-4 text-orange-600" /> Book Puja Online
               </button>
               <button onClick={() => scrollToSection('packages')} className="text-left text-orange-600 font-bold transition-colors">Packages &amp; Dakshina</button>
-              <Link href="/puja-samagri-list" className="text-left text-amber-800 font-bold transition-colors">📦 पूजा सामग्री लिस्ट (मात्रा सहित)</Link>
+              <button onClick={() => scrollToSection('pooja-samagri')} className="text-left text-amber-900 font-bold transition-colors flex items-center gap-2">
+                <span>🛍️ Pooja Samagri (पूजा सामग्री लिस्ट)</span>
+              </button>
               <button onClick={() => scrollToSection('muhurat-finder')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Shubh Muhurat Finder</button>
               <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</button>
               <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">About</button>
@@ -886,14 +890,15 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Mobile Hero Button for Puja Samagri / Product List */}
-            <Link href="/puja-samagri-list" className="block w-full">
-              <Button size="sm" className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold py-2.5 h-auto text-xs sm:text-sm rounded-xl shadow-lg flex items-center justify-center gap-2 border border-amber-300/40">
-                <ShoppingBag className="w-4 h-4 text-yellow-200" />
-                <span>📋 48+ पूजा सामग्री लिस्ट देखें (Product List)</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Button>
-            </Link>
+            {/* Mobile Hero Button for Pooja Samagri */}
+            <button
+              onClick={() => scrollToSection('pooja-samagri')}
+              className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold py-2.5 px-3 rounded-xl shadow-lg flex items-center justify-center gap-2 border border-amber-300/40 text-xs sm:text-sm active:scale-95 transition-all cursor-pointer"
+            >
+              <ShoppingBag className="w-4 h-4 text-yellow-200" />
+              <span>📋 Pooja Samagri (पूजा सामग्री लिस्ट)</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
 
             {/* Mobile Booking Form - Positioned Right on Top for Mobile */}
             <div id="booking-form-hero" className="pt-2">
@@ -979,13 +984,14 @@ export default function Home() {
                 </a>
               </div>
               <div className="mb-10">
-                <Link href="/puja-samagri-list" className="block">
-                  <Button size="lg" className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold border border-amber-300/40 shadow-xl hover:shadow-orange-500/40 transform hover:-translate-y-1 transition-all duration-300 py-6 text-base md:text-lg rounded-2xl flex items-center justify-center gap-2">
-                    <ShoppingBag className="w-5 h-5 text-yellow-200" />
-                    <span>📋 पूजा सामग्री लिस्ट देखें (48+ Items Product List)</span>
-                    <ArrowRight className="w-5 h-5 ml-1" />
-                  </Button>
-                </Link>
+                <button
+                  onClick={() => scrollToSection('pooja-samagri')}
+                  className="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white font-bold border border-amber-300/40 shadow-xl hover:shadow-orange-500/40 transform hover:-translate-y-1 transition-all duration-300 py-5 px-6 text-base md:text-lg rounded-2xl flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <ShoppingBag className="w-5 h-5 text-yellow-200" />
+                  <span>📋 Pooja Samagri (पूजा सामग्री लिस्ट)</span>
+                  <ArrowRight className="w-5 h-5 ml-1" />
+                </button>
               </div>
             </div>
 

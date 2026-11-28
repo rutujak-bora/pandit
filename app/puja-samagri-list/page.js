@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { Phone, MessageCircle, Download, CheckSquare, Sparkles, ShoppingBag, ArrowRight } from 'lucide-react'
+import SamagriChecklistSection from '@/components/SamagriChecklistSection'
 
 export const metadata = {
   title: 'Complete Puja Samagri List with Quantity | सम्पूर्ण पूजन सामग्री लिस्ट',
-  description: 'Download complete Hindu Vedic Puja Samagri list with exact quantities in Hindi & English (चावल, रोली, कलावा, गंगाजल, हवन सामग्री, घी). Book authentic samagri or pandit ji at doorstep in Lucknow & Delhi NCR.',
-  keywords: 'pooja product list, pooja samagri list in hindi, complete puja samagri with quantity, pujan samagri list pdf, havan samagri list, griha pravesh puja samagri, satyanarayan katha samagri, pooja items list, pooja samagri shop near me, pooja ingredients list',
+  description: 'Complete Hindu Vedic Puja Samagri list with exact quantities for Yagyopaveet (Janeu), Griha Pravesh, Rudrabhishek, and Satyanarayan Katha. Book authentic samagri or pandit ji at doorstep in Lucknow & Delhi NCR.',
+  keywords: 'pooja product list, pooja samagri list in hindi, yagyopaveet sanskar samagri, janeu samagri list, griha pravesh puja samagri, rudrabhishek puja samagri, satyanarayan katha samagri, complete puja samagri with quantity, pujan samagri list pdf, havan samagri list, pooja items list',
   openGraph: {
     title: 'Complete Vedic Puja Samagri List with Quantity | सम्पूर्ण पूजन सामग्री लिस्ट',
     description: 'Detailed list of 45+ essential Hindu Vedic puja items with exact grams & pieces. Curated by Pandit Sandesh Tiwari.',
@@ -189,6 +190,9 @@ export default function PujaSamagriListPage() {
             </div>
           </div>
         </section>
+
+        {/* Interactive Puja-Wise Samagri Tabs (Yagyopaveet, Griha Pravesh, Rudrabhishek, Satyanarayan) */}
+        <SamagriChecklistSection />
 
         {/* Main Table / Product List */}
         <section id="items-table" className="py-12 container mx-auto px-4 max-w-5xl">
